@@ -133,26 +133,16 @@
 </head>
 <body class="text-gray-800">
 
+ <!-- Reset body margin in your CSS -->
+<style>
+  body {
+    margin: 0;
+  }
+</style>
+
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-sm py-4 px-6 md:px-12 lg:px-24 sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-md p-2 hover:bg-indigo-50 transition duration-300">
-                Inno<span class="text-gray-900">Vigyan</span>
-            </a>
-
-            <!-- Navigation Links -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Home</a>
-                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">About Us</a>
-                <a href="#director-desk" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Director's Desk</a>
-                <a href="#programs" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Programs</a>
-                <a href="#glimpses" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Glimpses</a>
-                <a href="#seminars" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Seminars</a>
-                <a href="#why-choose-us" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Why Choose Us</a>
-                <a href="#upcoming-plans" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Upcoming Plans</a>
-                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Contact</a>
-            </div>
 
             <!-- Mobile Menu Button (Hamburger Icon) -->
             <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-indigo-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-300">
@@ -175,181 +165,269 @@
             <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Contact</a>
         </div>
     </nav>
+            
+<!-- Hero Section -->
+<section id="home" 
+    class="relative min-h-screen w-full bg-cover bg-center flex flex-col"
+    style="background-image: url(Untitled\ design\ \(1\)a.png);">
 
-    <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 md:py-32 flex items-center justify-center min-h-screen-75">
-        <div class="container mx-auto text-center px-6 md:px-12 lg:px-24">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
-                InnoVigyan
-            </h1>
-            <p class="text-2xl md:text-3xl font-semibold mb-6 opacity-90 animate-fade-in">
-                Ideas | Innovation | Skills Enhancement
-            </p>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto opacity-90 animate-fade-in">
-                A Center for Innovation and Skill Enhancement
-            </p>
-            <a href="#programs" class="inline-block bg-white text-indigo-600 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
-                Explore Our Programs
-            </a>
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-600/20"></div>
+
+    <!-- Navigation + Logo (inside hero) -->
+    <header class="relative z-10 w-full">
+        <div class="flex items-center justify-between px-6 py-4">
+
+         <!-- Logo -->
+            <a href="#home" class="flex items-center space-x-2">
+                <img src="cropped_circle_image.png" alt="InnoVigyan Logo" class="h-20 w-20">
+            </a>    
+    
+            <!-- Nav Links -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-yellow-300 font-medium transition duration-300">Home</a>
+                <a href="#about" class="text-white hover:text-yellow-300 font-medium transition duration-300">About Us</a>
+                <a href="#programs" class="text-white hover:text-yellow-300 font-medium transition duration-300">Programs</a>
+                <a href="#glimpses" class="text-white hover:text-yellow-300 font-medium transition duration-300">Glimpses</a>
+                <a href="#seminars" class="text-white hover:text-yellow-300 font-medium transition duration-300">Seminars</a>
+                <a href="#why-choose-us" class="text-white hover:text-yellow-300 font-medium transition duration-300">Why Choose Us</a>
+                <a href="#upcoming-plans" class="text-white hover:text-yellow-300 font-medium transition duration-300">Upcoming Plans</a>
+                <a href="#contact" class="text-white hover:text-yellow-300 font-medium transition duration-300">Contact</a>
+            </nav>
         </div>
-    </section>
+    </header>
+
+    <!-- Hero Center Content -->
+    <div class="relative z-10 flex flex-1 flex-col items-center justify-start text-center px-6 md:px-12 lg:px-24 pt-32">
+        <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white">
+            INNOVIGYAN
+        </h1>
+        <p class="text-2xl md:text-3xl font-semibold mb-6 opacity-90 text-white">
+            Ideas | Innovation | Counselling | Skills Enhancement
+        </p>
+        <a href="#programs" 
+           class="inline-block bg-white text-indigo-600 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+           Explore Our Programs
+        </a>
+    </div>
+</section>
+
 
     <!-- About Us Section -->
-    <section id="about" class="py-16 md:py-24 bg-white fade-in-section">
-        <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About InnoVigyan</h2>
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
-                <div class="md:w-1/2 text-lg leading-relaxed">
-                    <h3 class="text-2xl font-semibold text-indigo-600 mb-4">What is InnoVigyan?</h3>
-                    <p class="mb-4">
-                        InnoVigyan = Innovation + Vigyan (Science). It's a place where Science meets Innovation to solve day-to-day problems. We provide an ultimate platform to upskill yourself in a scientific & smarter way.
-                    </p>
-                    <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Vision-Mission of InnoVigyan</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>To create awareness & nourish students in the field of Creativity, Innovation, Memory Championship, Counselling & Life Coaching for overall development.</li>
-                        <li>To contribute in educational upliftment with Smart Studies, Teacher training, Career Counselling, technical & Personality grooming oriented programs.</li>
-                        <li>To make Studies and Innovation; Fun, Affordable and accessible to all, by providing a platform with proven techniques and right mentorship.</li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2">
-                    <!-- Placeholder for InnoVigyan Concept Image -->
-                    <img src="https://placehold.co/600x400/e0e7ff/4f46e5?text=InnoVigyan+Concept" alt="InnoVigyan Concept" class="rounded-xl shadow-lg w-full h-auto object-cover">
-                </div>
-            </div>
+<section id="about" class="py-16 md:py-24 bg-white fade-in-section">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
 
-            <h3 class="text-3xl font-bold text-center mb-10">Founded & Lead by:</h3>
+    <!-- Section Title -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      About InnoVigyan
+    </h2>
+
+    <!-- What is InnoVigyan -->
+    <div class="mb-12 text-lg leading-relaxed">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-4">
+        What is InnoVigyan?
+      </h3>
+      <p class="text-gray-700">
+        InnoVigyan = Innovation + Vigyan (Science). It's an initiative to provide an ultimate platform to upskill oneself 
+        in a scientific & smarter way.
+      </p>
+    </div>
+
+    <!-- Vision & Mission in Two Columns -->
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- Vision -->
+      <div>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Vision</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left text-sm">
+          <li>To be a trusted partner in shaping confident, skilled, and future-ready individuals.</li>
+          <li>To create a learning space where innovation, personal growth, and academic excellence go hand in hand.</li>
+          <li>To empower students and professionals to discover their strengths, overcome challenges, and achieve their goals.</li>
+        </ul>
+        </div>
+      </div>
+
+      <!-- Mission -->
+      <div>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Mission</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left text-sm">
+          <li>Prepare students for exams with effective study techniques, focus training and time management.</li>
+          <li>Provide personalized counseling & guidance backed by DMIT & psychometric tools.</li>
+          <li>Equip learners with innovative skills & strategies for both academics & life.</li>
+          <li>Offer life coaching to build resilience, confidence & emotional well-being.</li>
+        </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+            <h3 class="text-3xl font-bold text-center mb-10">Founded & Lead by</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Mr. Moazzam Kapde -->
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
                     <!-- Placeholder for Mr. Moazzam Kapde's Image -->
-                    <img src="https://placehold.co/150x150/d1d5db/374151?text=Moazzam" alt="Mr. Moazzam Kapde" class="rounded-full w-36 h-36 object-cover mb-6 shadow-lg">
+                    <img src="director.jpg" alt="Mr. Moazzam Kapde" class="rounded-full w-36 h-36 object-cover mb-6 shadow-lg">
                     <h4 class="text-xl font-semibold text-indigo-700 mb-2">Mr. Moazzam Kapde</h4>
-                    <p class="text-gray-600 mb-4">EV R&D Engineer, Innovator, Researcher & Emerging Scientist</p>
+                    <p class="text-gray-600 mb-4">Innovator, Researcher, Educator. Empowering minds for the future.</p>
                     <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full max-w-md">
-                        <li>Memory Trainer & Certified Arbiter with Indian Memory Sports Council</li>
-                        <li>Certified NLP Practitioner, Mindset Trainer, Speaker & Counsellor</li>
-                        <li>Filed multiple Indian Prov. Patent Applications & Published research Papers</li>
-                        <li>Won several National & State level Research Paper & Innovative Project Competitions</li>
-                        <li>Trained 1500+ students across Maharashtra</li>
+                        <li>Award Winning Innovator and EV R&D engineer</li>
+                        <li>Memory Researcher and Study Skills Specialist</li>
+                        <li>Official Jury for Maharashtra State Innovation Society and Certified Arbiter for Indian Memory Sports Council</li>
+                        <li>NLP Practitioner, Mindset Trainer, Speaker & Counselor</li>
+                        <li>Trainer and Mentor to 2000+ students across Globe</li>
                     </ul>
                 </div>
-                <!-- Miss. Sadiya Modak -->
+                <!-- Ms. Sadiya Modak -->
                 <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
                     <!-- Placeholder for Miss. Sadiya Modak's Image -->
-                    <img src="https://placehold.co/150x150/d1d5db/374151?text=Sadiya" alt="Miss. Sadiya Modak" class="rounded-full w-36 h-36 object-cover mb-6 shadow-lg">
-                    <h4 class="text-xl font-semibold text-indigo-700 mb-2">Miss. Sadiya Modak</h4>
-                    <p class="text-gray-600 mb-4">Globally Certified NLP Master Practitioner & Professional Life Coach</p>
+                    <img src="founder2.jpg" alt="Miss. Sadiya Modak" class="rounded-full w-36 h-36 object-cover mb-6 shadow-lg">
+                    <h4 class="text-xl font-semibold text-indigo-700 mb-2">Ms. Sadiya Modak Kapde</h4>
+                    <p class="text-gray-600 mb-4">Life Coach, NLP Master, Counselor. Unlocking potential, shaping futures.</p>
                     <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full max-w-md">
-                        <li>Certified Trainer for Vedic Maths, Abacus, Mental Maths and Handwriting Improvement</li>
-                        <li>Double graduate in Maths and Physics with 6+ years of teaching experience</li>
+                        <li>Globally Certified NLP Master Practitioner and Life Coach</li>
+                        <li>Globally Certified Emotional Intelligence Practitioner</li>
+                        <li>Certified DMIT and Psychometric testing Expert</li>
                         <li>Post Graduate Diploma in Modern Applied Psychology</li>
-                        <li>Career Counsellor, Trainer, Speaker and Mentor</li>
+                        <li>Career Counsellor, Child and Parental Counseling Specialist</li>
                     </ul>
                 </div>
             </div>
             <p class="text-center text-lg mt-10 text-gray-700">
-                We are supported by a team of experts including Pune University Engineering Gold-Medalist, Trainers, Counsellors, Mentors, Coaches and experts of diversified domains.
+                We are supported by a team of experts including <b>Pune University Gold-Medalist, Trainers, Counselors, Mentors, Coaches and Experts of diversified domains.</b>
             </p>
         </div>
     </section>
 
-    <!-- From Director's Desk Section -->
-    <section id="director-desk" class="py-16 md:py-24 bg-gray-100 fade-in-section">
-        <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">From Director's Desk</h2>
-            <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-start gap-8">
-                <div class="md:w-1/4 flex justify-center md:block">
-                    <!-- Placeholder for Director's Image -->
-                    <img src="https://placehold.co/180x180/e0e7ff/4f46e5?text=Director" alt="Director" class="rounded-full w-44 h-44 object-cover shadow-lg">
-                </div>
-                <div class="md:w-3/4 text-lg leading-relaxed text-gray-700">
-                    <p class="mb-4">
-                        Welcome to InnoVigyan – a center for Innovation & skills enhancement! It has started dedicated to create awareness and help individuals in the journey of Innovation & being skillful. Our Director Mr. Moazzam Kapde who is an Electrical Engineer by profession is also a full-time researcher-cum-innovator too.
-                    </p>
-                    <p class="mb-4">
-                        Currently he is having multiple provisional Patent Applications filed on his name. Out of which one is on the way to be the 35 countries based PCT and multiple to be complete Indian Patents. He has won several National and State level research paper presentations and Innovative project competitions.
-                    </p>
-                    <p class="mb-4">
-                        Recently in July 2021 he got awarded by the "InSc Young Researcher Award 2021" by InSc, Bangalore. Moreover, he is a director of his MSME reg. firm "Kapde Electrical Services" too. We are aiming to help our Nation be Aatmanirbhar with the help of real Innovations.
-                    </p>
-                    <p>
-                        We have prepared in-depth and well structured programs to help you to experience everything about Innovation from start to very end. Simultaneously we have designed few special programs to help you with your Exam preparation, career counselling in the field of engineering and to convert your expertise into a profitable online course etc. If you have any query feel free to connect with us anytime! We would be more than happy to help.
-                    </p>
-                </div>
-            </div>
+   <!-- Programs Section -->
+<section id="programs" class="py-16 md:py-24 bg-gray-50 fade-in-section">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Top Programs</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Program Card 1 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="memory-masters">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          <!-- Brain Icon -->
+          🧠
         </div>
-    </section>
+        <h3 class="text-xl font-semibold text-center mb-4">Memory Masters</h3>
+        <p class="text-gray-600 text-center mb-4">
+          Unlock your brain's full potential with our scientifically designed memory enhancement programs.
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Smart Studies Program</li>
+          <li>Memory Champion Program</li>
+          <li>Preparation for Indian Memory Championship</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
 
-    <!-- Programs Section -->
-    <section id="programs" class="py-16 md:py-24 bg-gray-50 fade-in-section">
-        <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Top Programs</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Program Card 1: Memory Masters -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="memory-masters">
-                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain"><path d="M12 5a3 3 0 1 0-3 3c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6a3 3 0 1 0 0 6c.38.88.93 1.74 1.67 2.5.14.2.27.4.4.6C7.2 17.7 8 18 9 18a3 3 0 1 0 0-6c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6"/><path d="M12 5a3 3 0 1 0-3 3c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6a3 3 0 1 0 0 6c.38.88.93 1.74 1.67 2.5.14.2.27.4.4.6C7.2 17.7 8 18 9 18a3 3 0 1 0 0-6c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6Z" transform="translate(9 0)"/><path d="M12 5a3 3 0 1 0-3 3c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6a3 3 0 1 0 0 6c.38.88.93 1.74 1.67 2.5.14.2.27.4.4.6C7.2 17.7 8 18 9 18a3 3 0 1 0 0-6c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6Z" transform="translate(0 9)"/><path d="M12 5a3 3 0 1 0-3 3c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6a3 3 0 1 0 0 6c.38.88.93 1.74 1.67 2.5.14.2.27.4.4.6C7.2 17.7 8 18 9 18a3 3 0 1 0 0-6c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6Z" transform="translate(9 9)"/></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-4">Memory Masters</h3>
-                    <p class="text-gray-600 text-center mb-4">
-                        Unlock your brain's full potential with our scientifically designed memory enhancement programs.
-                    </p>
-                    <ul class="list-disc list-inside text-sm text-gray-600 text-left">
-                        <li>Smart Studies Program</li>
-                        <li>Memory Champion Program</li>
-                        <li>Preparation for Indian Memory Championship</li>
-                    </ul>
-                    <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
-                </div>
-
-                <!-- Program Card 2: Teaching Titans -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="teaching-titans">
-                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.982c.13.72-.296 1.42-.966 1.732l-7.021 3.167a1.102 1.102 0 0 1-.9-.001L6.07 12.714a1.102 1.102 0 0 1-.966-1.732l.321-.643a1.102 1.102 0 0 1 1.085-.696c.144.012.283.064.412.15l3.877 2.761a1.102 1.102 0 0 0 1.34-.087l6.592-5.488a1.102 1.102 0 0 1 1.4-.047l.322.215c.61.407.723 1.283.26 1.83Z"/><path d="M12 3v13"/><path d="M12 16c4.418 0 8-2.91 8-6.5S16.418 3 12 3 4 5.91 4 9.5 7.582 16 12 16Z"/></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-4">Teaching Titans</h3>
-                    <p class="text-gray-600 text-center mb-4">
-                        Empowering educators with advanced teaching methodologies and professional development.
-                    </p>
-                    <ul class="list-disc list-inside text-sm text-gray-600 text-left">
-                        <li>Teacher Training Program</li>
-                        <li>Career Counselling Program</li>
-                        <li>Classroom Management & Innovative Teaching</li>
-                    </ul>
-                    <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
-                </div>
-
-                <!-- Program Card 3: Ignited Innovators -->
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="ignited-innovators">
-                    <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 6c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/><path d="M11 17v5"/><path d="M13 17v5"/></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-center mb-4">Ignited Innovators</h3>
-                    <p class="text-gray-600 text-center mb-4">
-                        Fostering creativity and innovation to cultivate the next generation of problem-solvers.
-                    </p>
-                    <ul class="list-disc list-inside text-sm text-gray-600 text-left">
-                        <li>Creativity Enhancement Program (School & College Students)</li>
-                        <li>Ultimate Innovation Program (Diploma & Engg. Students)</li>
-                        <li>Patent Filing & Research Paper Publication</li>
-                    </ul>
-                    <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
-                </div>
-            </div>
+      <!-- Program Card 2 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="teaching-titans">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          🎓
         </div>
-    </section>
+        <h3 class="text-xl font-semibold text-center mb-4">Teaching Titans</h3>
+        <p class="text-gray-600 text-center mb-4">
+          Empowering educators with advanced teaching methodologies and professional development.
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Teacher Training Program</li>
+          <li>Career Counselling Program</li>
+          <li>Classroom Management & Innovative Teaching</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+
+      <!-- Program Card 3 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="ignited-innovators">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          💡
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Ignited Innovators</h3>
+        <p class="text-gray-600 text-center mb-4">
+          Fostering creativity and innovation to cultivate the next generation of problem-solvers.
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Creativity Enhancement Program</li>
+          <li>Ultimate Innovation Program</li>
+          <li>Patent Filing & Research Publication</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+
+      <!-- Program Card 4 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          💬
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Communication Catalyst</h3>
+        <p class="text-gray-600 text-center mb-4">
+          Improve your public speaking, presentation, and overall communication skills.
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Public Speaking Workshops</li>
+          <li>Personality Development</li>
+          <li>Professional Interview Training</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+
+      <!-- Program Card 5 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          📊
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Career Compass</h3>
+        <p class="text-gray-600 text-center mb-4">
+          Personalized career guidance to help students and professionals achieve their goals.
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>DMIT-based Career Counselling</li>
+          <li>Psychometric Assessments</li>
+          <li>Goal-Setting Strategies</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+
+      <!-- Program Card 6 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          🧘
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Mind & Wellness</h3>
+        <p class="text-gray-600 text-center mb-4">
+          Boost mental health, focus, and overall well-being with targeted programs.
+        </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Mindfulness & Meditation</li>
+          <li>Stress Management</li>
+          <li>Focus Training Programs</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Our Journey in Glimpses Section -->
     <section id="glimpses" class="py-16 md:py-24 bg-white fade-in-section">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Journey in Glimpses</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Glimpses of our Journey</h2>
             <p class="text-lg text-center mb-10 max-w-3xl mx-auto text-gray-700">
-                A look at our achievements, workshops, and the vibrant moments from the Indian Memory Championship.
+                A look at our achievements, workshops, and the vibrant moments from the Journey so far.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Placeholder Image 1: Awards & Recognition -->
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden group">
-                    <img src="https://placehold.co/400x300/e0e7ff/4f46e5?text=Awards" alt="Awards & Recognition" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                    <img src="A1.jpg" alt="Awards & Recognition" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
                     <div class="p-4">
                         <p class="text-md font-semibold text-gray-800">Awards & Recognition</p>
                         <p class="text-sm text-gray-600">Celebrating our milestones.</p>
@@ -357,23 +435,64 @@
                 </div>
                 <!-- Placeholder Image 2: Workshops -->
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden group">
-                    <img src="https://placehold.co/400x300/e0e7ff/4f46e5?text=Workshops" alt="Workshops & Interactions" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                    <img src="w1.jpg" alt="Workshops & Interactions" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
                     <div class="p-4">
                         <p class="text-md font-semibold text-gray-800">Workshops & Interactions</p>
                         <p class="text-sm text-gray-600">Engaging learning sessions.</p>
                     </div>
                 </div>
-                <!-- Placeholder Image 3: Memory Championship -->
-                <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden group">
-                    <img src="https://placehold.co/400x300/e0e7ff/4f46e5?text=Memory+Championship" alt="Memory Championship" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
-                    <div class="p-4">
-                        <p class="text-md font-semibold text-gray-800">Indian Memory Championship</p>
-                        <p class="text-sm text-gray-600">Moments from the competition.</p>
-                    </div>
-                </div>
+                <!-- Memory Championship Card -->
+<div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
+  <!-- Main Thumbnail -->
+  <img src="Memory.jpg" alt="Memory Championship" 
+       class="w-full h-48 object-cover cursor-pointer"
+       onclick="openGallery(0)">
+  
+  <!-- Card Text -->
+  <div class="p-4">
+    <p class="text-md font-semibold text-gray-800">Indian Memory Championship</p>
+    <p class="text-sm text-gray-600">Moments from the competition.</p>
+  </div>
+</div>
+
+<!-- Fullscreen Gallery Modal -->
+<div id="galleryModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+  <button class="absolute top-5 right-8 text-white text-3xl" onclick="closeGallery()">&times;</button>
+  <button class="absolute left-5 text-white text-3xl" onclick="prevImage()">&#10094;</button>
+  <img id="galleryImage" src="" class="max-w-full max-h-full rounded-lg shadow-lg">
+  <button class="absolute right-5 text-white text-3xl" onclick="nextImage()">&#10095;</button>
+</div>
+
+<script>
+  const images = ["Memory.jpg", "M2.jpg", "M3.jpg"];
+  let currentIndex = 0;
+
+  function openGallery(index) {
+    currentIndex = index;
+    document.getElementById("galleryImage").src = images[currentIndex];
+    document.getElementById("galleryModal").classList.remove("hidden");
+  }
+
+  function closeGallery() {
+    document.getElementById("galleryModal").classList.add("hidden");
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("galleryImage").src = images[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("galleryImage").src = images[currentIndex];
+  }
+</script>
+
+
+
                 <!-- Placeholder Image 4: Student Success -->
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden group">
-                    <img src="https://placehold.co/400x300/e0e7ff/4f46e5?text=Student+Success" alt="Student Success" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                    <img src="S1.jpg" alt="Student Success" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
                     <div class="p-4">
                         <p class="text-md font-semibold text-gray-800">Student Success Stories</p>
                         <p class="text-sm text-gray-600">Our students achieving greatness.</p>
@@ -383,58 +502,7 @@
         </div>
     </section>
 
-    <!-- Seminars & Webinars Section -->
-    <section id="seminars" class="py-16 md:py-24 bg-gray-100 fade-in-section">
-        <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Seminars & Webinars</h2>
-            <p class="text-lg text-center mb-8 max-w-3xl mx-auto text-gray-700">
-                We conduct expert sessions and seminar/webinars on multiple topics with a team of diversified experts.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
-                    <div class="text-indigo-600 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                    </div>
-                    <p class="text-gray-700 font-medium">Goal Setting, Mindset Grooming & Personality Development</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
-                    <div class="text-indigo-600 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                    </div>
-                    <p class="text-gray-700 font-medium">Creativity Enhancement, Ideation & Out of Box thinking</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
-                    <div class="text-indigo-600 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                    </div>
-                    <p class="text-gray-700 font-medium">Effective Parenting, Career Counselling & Child Psychology</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
-                    <div class="text-indigo-600 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                    </div>
-                    <p class="text-gray-700 font-medium">Creativity and Innovation for Entrepreneurship</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
-                    <div class="text-indigo-600 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                    </div>
-                    <p class="text-gray-700 font-medium">Emerging trends in Electric vehicles & E-Mobility</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
-                    <div class="text-indigo-600 flex-shrink-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                    </div>
-                    <p class="text-gray-700 font-medium">Many other on-demand Webinars & Seminars by Experts</p>
-                </div>
-            </div>
-            <p class="text-center text-lg mt-8 text-gray-700">
-                To know more or organize a seminar, kindly connect with us.
-            </p>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
+     <!-- Why Choose Us Section -->
     <section id="why-choose-us" class="py-16 md:py-24 bg-gray-50 fade-in-section">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Us (Our USP)</h2>
@@ -480,6 +548,73 @@
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <div class="py-8 text-center">
+        <h3 class="text-xl font-semibold mb-10">Watch InnoVigyan - Quick Intro</h3>
+        <div class="video-wrap max-w-4xl mx-auto flex justify-center">
+        <iframe
+           width="1500"
+           height="450"
+           src="https://www.youtube.com/embed/8jmHE6HxrJM?start=2"
+           title="Watch InnoVigyan - Quick Intro"
+           frameborder="0"
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+           allowfullscreen>
+        </iframe>
+        </div>
+        </div>
+
+
+    <!-- Seminars & Webinars Section -->
+    <section id="seminars" class="py-16 md:py-24 bg-gray-100 fade-in-section">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Seminars & Webinars</h2>
+            <p class="text-lg text-center mb-8 max-w-3xl mx-auto text-gray-700">
+                We conduct expert sessions and seminar/webinars on multiple topics with a team of experts.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <p class="text-gray-700 font-medium">Study Skills, Exam Preparation and Memory Enhancement</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <p class="text-gray-700 font-medium">Career Exploration, Parenting Skills and Life Coaching</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <p class="text-gray-700 font-medium">Ideas to Innovation, Problem Solving and Creativity Enhancement</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <p class="text-gray-700 font-medium">Goal Setting, Mindset Grooming & Personality Development</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <p class="text-gray-700 font-medium">Leadership Skills, Soft Skills and Entrepreneurship</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 hover:shadow-lg transition duration-300">
+                    <div class="text-indigo-600 flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    </div>
+                    <p class="text-gray-700 font-medium">Special Interest Programs by diversified Experts of respective fields</p>
+                </div>
+            </div>
+            <p class="text-center text-lg mt-8 text-gray-700">
+                To know more or organize a seminar, kindly connect with us.
+            </p>
         </div>
     </section>
 
@@ -546,7 +681,73 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
+   <section id="contact" class="py-16 md:py-24 bg-white fade-in-section">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get in Touch</h2>
+        <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl shadow-md">
+            <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); showContactMessage();">
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required>
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your query or project..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            <div id="contact-message" class="mt-6 p-4 bg-green-100 text-green-800 rounded-lg text-center hidden">
+                Thank you for your message! We will get back to you shortly.
+            </div>
+            <div class="mt-8 text-center text-lg text-gray-700">
+                <p class="mb-2">Mail: <a href="mailto:wazifakapde39@gmail.com" class="text-indigo-600 hover:underline">kapdemoazzam97@gmail.com</a></p>
+                <p>Call: +91 9860528788 / +91 9511675973</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function showContactMessage() {
+        // Get the form element
+        const form = document.getElementById('contact-form');
+        // Get the contact message element
+        const message = document.getElementById('contact-message');
+
+        // Check if the form is valid (browser's built-in validation)
+        if (form.checkValidity()) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Display the success message
+            message.classList.remove('hidden');
+
+            // Clear the form fields after a short delay
+            setTimeout(() => {
+                form.reset();
+            }, 3000); // Clears the form after 3 seconds
+
+            // Hide the success message after another delay
+            setTimeout(() => {
+                message.classList.add('hidden');
+            }, 5000); // Hides the message after 5 seconds
+        } else {
+            // If the form is not valid, trigger browser's validation messages
+            form.reportValidity();
+        }
+    }
+</script>
+
+
+ <!-- Call to Action Section -->
     <section class="bg-indigo-700 text-white py-16 md:py-20 text-center fade-in-section">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Skills?</h2>
@@ -556,41 +757,6 @@
             <a href="#contact" class="inline-block bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
                 Connect With Us
             </a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 md:py-24 bg-white fade-in-section">
-        <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get in Touch</h2>
-            <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-xl shadow-md">
-                <form class="space-y-6" onsubmit="event.preventDefault(); showContactMessage();">
-                    <div>
-                        <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your query or project..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition duration-300 ease-in-out">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-                <div id="contact-message" class="mt-6 p-4 bg-green-100 text-green-800 rounded-lg text-center hidden">
-                    Thank you for your message! We will get back to you shortly.
-                </div>
-                <div class="mt-8 text-center text-lg text-gray-700">
-                    <p class="mb-2">Mail: <a href="mailto:kapdemoazzam97@gmail.com" class="text-indigo-600 hover:underline">kapdemoazzam97@gmail.com</a></p>
-                    <p>Call: +91 9860528788 / +91 9511675973</p>
-                </div>
-            </div>
         </div>
     </section>
 
