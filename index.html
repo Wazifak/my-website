@@ -668,7 +668,7 @@ class="py-16 md:py-24 bg-white fade-in-section">
 </section>
 
 <!-- Fullscreen Gallery Modal -->
-<div id="galleryModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 transition-opacity duration-500">
+ <div id="galleryModal" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity duration-500">
   <button class="absolute top-5 right-8 text-white text-4xl font-bold" onclick="closeGallery()">&times;</button>
   <button class="absolute left-5 text-white text-3xl" onclick="prevImage()">&#10094;</button>
   <img id="galleryImage" src="" alt="" class="max-w-full max-h-[80vh] rounded-lg shadow-lg transition duration-500">
@@ -718,79 +718,88 @@ class="py-16 md:py-24 bg-white fade-in-section">
 </script>
 
     <!-- Why Choose Us Section -->
-<section id="why-choose-us" 
-class="mt-[5px] relative z-20 bg-white
-class="py-16 md:py-24 bg-gray-50 fade-in-section">
-    <div class="container mx-auto px-6 md:px-12 lg:px-24">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Us (Our USP)</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Our Mentors -->
-            <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="text-indigo-600 mb-4 text-5xl bg-indigo-50 p-4 rounded-full">
-                    <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-4">Our Mentors</h3>
-                <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full">
-                    <li>Innovators, Scholars, Researchers & Scientists</li>
-                    <li>Globally certified NLP practitioners, Life coaches & Career-counsellors</li>
-                    <li>University gold-medalist, college principals & trainers</li>
-                </ul>
-            </div>
+<section id="why-choose-us" class="relative z-20 bg-gray-50 py-16 md:py-24">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+      Why Choose Us (Our USP)
+    </h2>
 
-            <!-- Our Courses -->
-            <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="text-indigo-600 mb-4 text-5xl bg-indigo-50 p-4 rounded-full">
-                    <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-4">Our Courses</h3>
-                <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full">
-                    <li>Niched & To the point</li>
-                    <li>Practical learning oriented</li>
-                    <li>Prepared by experts of their respective field</li>
-                    <li>Trial & Tested</li>
-                    <li>Result oriented</li>
-                </ul>
-            </div>
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            <!-- Our Causes -->
-            <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="text-indigo-600 mb-4 text-5xl bg-indigo-50 p-4 rounded-full">
-                    <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-4">Our Causes</h3>
-                <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full">
-                    <li>To make an impact in real time education system</li>
-                    <li>To provide opportunities & platform for scientific way of study & Innovation</li>
-                    <li>To give best in class content at budget friendly price</li>
-                </ul>
-            </div>
+      <!-- Card 1 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer">
+        <div class="text-6xl mb-6 flex justify-center">
+          👩‍🏫
         </div>
+        <h3 class="text-xl font-semibold text-indigo-700 mb-4 text-center">Our Mentors</h3>
+        <ul class="list-disc list-inside text-gray-600 text-left space-y-2 text-sm">
+          <li>Innovators, Scholars, Researchers & Scientists</li>
+          <li>Globally certified NLP practitioners, Life Coaches & Career Counselors</li>
+          <li>University Gold Medalists, Principals & Trainers</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer">
+        <div class="text-6xl mb-6 flex justify-center">
+          📚
+        </div>
+        <h3 class="text-xl font-semibold text-indigo-700 mb-4 text-center">Our Courses</h3>
+        <ul class="list-disc list-inside text-gray-600 text-left space-y-2 text-sm">
+          <li>Niched & To the point</li>
+          <li>Practical learning oriented</li>
+          <li>Prepared by industry experts</li>
+          <li>Tried & Tested</li>
+          <li>Result Oriented</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer">
+        <div class="text-6xl mb-6 flex justify-center">
+          ❤️
+        </div>
+        <h3 class="text-xl font-semibold text-indigo-700 mb-4 text-center">Our Causes</h3>
+        <ul class="list-disc list-inside text-gray-600 text-left space-y-2 text-sm">
+          <li>Impactful real-time education system</li>
+          <li>Platform for scientific study & innovation</li>
+          <li>Best-in-class content at budget-friendly price</li>
+        </ul>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<!--Counter Section-->
+<!-- Counter Section -->
 <section class="bg-blue-100 py-12">
   <div class="max-w-7xl mx-auto px-6 lg:px-24">
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center text-gray-800">
-      <div class="bg-white shadow-lg rounded-lg p-6">
-        <h3 class="text-4xl font-extrabold text-red-600" data-target="2000">0</h3>
+    <!-- Grid with 4 equal boxes centered -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center text-gray-800">
+      
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h3 class="text-4xl font-extrabold text-red-600" data-target="2000">0+</h3>
         <p class="mt-2 text-sm font-semibold">No of Students Trained</p>
       </div>
-      <div class="bg-white shadow-lg rounded-lg p-6">
-        <h3 class="text-4xl font-extrabold text-red-600" data-target="150">0</h3>
-        <p class="mt-2 text-sm font-semibold">No of Workshops & Seminars </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h3 class="text-4xl font-extrabold text-red-600" data-target="150">0+</h3>
+        <p class="mt-2 text-sm font-semibold">No of Workshops & Seminars</p>
       </div>
-      <div class="bg-white shadow-lg rounded-lg p-6">
-        <h3 class="text-4xl font-extrabold text-red-600" data-target="100">0</h3>
+
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h3 class="text-4xl font-extrabold text-red-600" data-target="100">0+</h3>
         <p class="mt-2 text-sm font-semibold">Student & Parent Satisfaction Rate</p>
       </div>
-      <div class="bg-white shadow-lg rounded-lg p-6">
-        <h3 class="text-4xl font-extrabold text-red-600" data-target="10">0</h3>
+
+      <div class="bg-white shadow-lg rounded-lg p-8">
+        <h3 class="text-4xl font-extrabold text-red-600" data-target="10">0+</h3>
         <p class="mt-2 text-sm font-semibold">Cities Covered (Offline)</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -805,11 +814,11 @@ function animateCounters() {
     let count = 0;
     function update() {
       count += increment;
-      if(count < target) {
-        counter.textContent = Math.floor(count);
+      if (count < target) {
+        counter.textContent = Math.floor(count) + "+";
         requestAnimationFrame(update);
       } else {
-        counter.textContent = target;
+        counter.textContent = target + "+";
       }
     }
     update();
@@ -819,7 +828,7 @@ function animateCounters() {
 // Animate when section visible
 function onVisibilityChange(entries, observer) {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
+    if (entry.isIntersecting) {
       animateCounters();
       observer.disconnect();
     }
@@ -924,64 +933,69 @@ sectionObserver.observe(document.querySelector('section.bg-blue-100'));
 </script>
 
 <!-- Seminars & Webinars Section -->
-<section id="seminars" 
-class="mt-[-10px] relative z-20 bg-white
-class="py-16 md:py-24 bg-gray-100 fade-in-section">
-    <div class="container mx-auto px-6 md:px-12 lg:px-24">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Seminars & Webinars</h2>
-        <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-gray-700">
-            We conduct expert sessions and seminar/webinars on multiple topics with a team of professionals.
-        </p>
+<section id="seminars" class="mt-[-10px] relative z-20 bg-gray-100 py-16 md:py-24 fade-in-section">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    
+    <!-- Title -->
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Seminars & Webinars</h2>
+    <p class="text-lg text-center mb-12 max-w-3xl mx-auto text-gray-700">
+      We conduct expert sessions and seminar/webinars on multiple topics with a team of professionals.
+    </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <!-- Seminar Card Template -->
-            <div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                <div class="flex-shrink-0 text-indigo-600 bg-indigo-50 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <p class="text-gray-700 font-medium">Study Skills, Exam Preparation and Memory Enhancement</p>
-            </div>
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-            <div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                <div class="flex-shrink-0 text-indigo-600 bg-indigo-50 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <p class="text-gray-700 font-medium">Career Exploration, Parenting Skills and Life Coaching</p>
-            </div>
+      <!-- Seminar Card -->
+<div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+  <!-- Emoji instead of logo image -->
+  <div class="flex-shrink-0 bg-indigo-50 rounded-full p-3 text-2xl flex items-center justify-center">
+    🎓
+  </div>
+  <p class="text-gray-700 font-medium">Study Skills, Exam Preparation and Memory Enhancement</p>
+</div>
 
-            <div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                <div class="flex-shrink-0 text-indigo-600 bg-indigo-50 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <p class="text-gray-700 font-medium">Ideas to Innovation, Problem Solving and Creativity Enhancement</p>
-            </div>
+<div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+  <div class="flex-shrink-0 bg-indigo-50 rounded-full p-3 text-2xl flex items-center justify-center">
+    💼
+  </div>
+  <p class="text-gray-700 font-medium">Career Exploration, Parenting Skills and Life Coaching</p>
+</div>
 
-            <div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                <div class="flex-shrink-0 text-indigo-600 bg-indigo-50 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <p class="text-gray-700 font-medium">Goal Setting, Mindset Grooming & Personality Development</p>
-            </div>
+<div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+  <div class="flex-shrink-0 bg-indigo-50 rounded-full p-3 text-2xl flex items-center justify-center">
+    💡
+  </div>
+  <p class="text-gray-700 font-medium">Ideas to Innovation, Problem Solving and Creativity Enhancement</p>
+</div>
 
-            <div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                <div class="flex-shrink-0 text-indigo-600 bg-indigo-50 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <p class="text-gray-700 font-medium">Leadership Skills, Soft Skills and Entrepreneurship</p>
-            </div>
+<div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+  <div class="flex-shrink-0 bg-indigo-50 rounded-full p-3 text-2xl flex items-center justify-center">
+    🎯
+  </div>
+  <p class="text-gray-700 font-medium">Goal Setting, Mindset Grooming & Personality Development</p>
+</div>
 
-            <div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
-                <div class="flex-shrink-0 text-indigo-600 bg-indigo-50 rounded-full p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-                </div>
-                <p class="text-gray-700 font-medium">Special Interest Programs by diversified Experts of respective fields</p>
-            </div>
-        </div>
+<div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+  <div class="flex-shrink-0 bg-indigo-50 rounded-full p-3 text-2xl flex items-center justify-center">
+    👥
+  </div>
+  <p class="text-gray-700 font-medium">Leadership Skills, Soft Skills and Entrepreneurship</p>
+</div>
 
-        <p class="text-center text-lg mt-12 text-gray-700">
-            To know more or organize a seminar, kindly <span class="font-semibold text-indigo-600">connect with us</span>.
-        </p>
-    </div>
+<div class="bg-white p-6 rounded-xl shadow-md flex items-start space-x-4 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+  <div class="flex-shrink-0 bg-indigo-50 rounded-full p-3 text-2xl flex items-center justify-center">
+    🌟
+  </div>
+  <p class="text-gray-700 font-medium">Special Interest Programs by diversified Experts of respective fields</p>
+</div>
+
+    <!-- Footer text -->
+ <div class="max-w-7xl mx-auto text-center mb-12">
+  <p class="text-lg text-gray-700 max-w-xl mx-auto">
+    To know more or organize a seminar, kindly 
+    <span class="font-semibold text-indigo-600">connect with us</span>.
+  </p>
+</div>
 </section>
 
 <!-- Blog Section-->
@@ -991,24 +1005,27 @@ class="py-16 md:py-24 bg-gray-100 fade-in-section">
     <p class="text-gray-600 max-w-xl mx-auto">Stay updated with insights and news from InnoVigyan.</p>
   </div>
 
-  <div class="space-y-8 max-w-4xl mx-auto">
+  <!-- Two Column Layout -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    
     <!-- Blog Post 1 -->
-    <article>
+    <article class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
       <h3 class="text-2xl font-semibold text-indigo-600 hover:underline">
-        <a href="https://example.com/blog/innovative-approaches" target="_blank" rel="noopener">Innovative Approaches in Skill Development</a>
+        <a href="blog-swap-screen-for-stories.html" target="_blank" rel="noopener">
+          Swap Screens for Stories: Creative Ways to Make Kids Fall in Love with Reading.
+        </a>
       </h3>
-      <p class="text-gray-700 mt-2">Explore new methods to enhance skills and keep up with latest industry trends.</p>
     </article>
 
-    <!-- Blog Post 2 -->
-    <article>
+    <!-- Blog Post 2 (Opens in new page) -->
+    <article class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
       <h3 class="text-2xl font-semibold text-indigo-600 hover:underline">
         <a href="blog-dmit-complete-guide.html" target="_blank">
-       DMIT - A Complete Guide to Talent & Intelligence Analysis
-       </a>
+          DMIT - A Complete Guide to Talent & Intelligence Analysis
+        </a>
       </h3>
     </article>
-    </div>
+  </div>
 </section>
 
 <!--Contact Form Section -->
@@ -1031,7 +1048,7 @@ class="py-16 md:py-24 bg-gray-100 fade-in-section">
         </div>
 
         <div>
-          <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message</label>
+          <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Message/Query</label>
           <textarea id="message" name="message" rows="5" placeholder="Tell us about your query or project..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200" required></textarea>
         </div>
 
@@ -1045,8 +1062,8 @@ class="py-16 md:py-24 bg-gray-100 fade-in-section">
       <div id="contact-message" class="mt-6 p-4 rounded-lg text-center hidden"></div>
 
       <div class="mt-8 text-center text-lg text-gray-700">
-        <p class="mb-2">Mail: <a href="mailto:kapdemoazzam97@gmail.com" class="text-indigo-600 hover:underline">kapdemoazzam97@gmail.com</a></p>
-        <p>Call: +91 9860528788 / +91 9511675973</p>
+        <p class="mb-2">Mail: <a href="mailto:info.innovigyan@gmail.com" class="text-indigo-600 hover:underline">info.innovigyan@gmail.com</a></p>
+        <p>Call: +91 7620653836 / +91 9860528788 </p>
       </div>
     </div>
   </div>
@@ -1433,3 +1450,5 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
+
