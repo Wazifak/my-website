@@ -239,17 +239,22 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-      menuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-        const expanded = menuButton.getAttribute("aria-expanded") === "true";
-        menuButton.setAttribute("aria-expanded", !expanded);
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        // Update aria-expanded attribute for accessibility
+        const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !expanded);
       });
-    });
-  </script>
+    } else {
+      console.warn('Mobile menu elements not found.');
+    }
+  });
+</script>
 </nav>
     
 <!-- Hero Section -->
@@ -1419,6 +1424,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
 
 
 
