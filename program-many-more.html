@@ -1,43 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Early Childhood Development & Parenting Skills</title>
-<link href="index2.html" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Early Childhood Development & Parenting Skills</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="index2.html" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-gray-800 font-sans">
 
-<header class="bg-white shadow py-6 mb-12">
-  <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
-    <h1 class="text-4xl font-bold text-indigo-600">Early Childhood Development & Parenting Skills</h1>
+  <!-- Header -->
+  <header class="bg-white shadow-lg py-12 mb-16 text-center">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-600 animate__animated animate__fadeInDown">
+        Early Childhood Development & Parenting Skills
+      </h1>
+      <p class="mt-3 text-gray-600 text-lg md:text-xl italic animate__animated animate__fadeIn animate__delay-1s">
+        Helping parents and educators nurture children with confidence and care.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 md:px-12 lg:px-24 mb-20 max-w-5xl space-y-16">
+
+    <!-- Intro -->
+    <section class="bg-white shadow-xl rounded-3xl p-10 text-center hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp">
+      <p class="text-xl leading-relaxed text-gray-700">
+        A specialized program designed to help parents and educators understand child psychology, development milestones, and effective parenting strategies for holistic growth.
+      </p>
+    </section>
+
+    <!-- Key Learnings -->
+    <section class="bg-indigo-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300">
+      <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
+        <span class="material-icons text-4xl"> Key Learnings </span>
+      </h2>
+      <ul class="list-disc list-inside space-y-3 text-indigo-100 text-lg max-w-md mx-auto">
+        <li>Stages of child development</li>
+        <li>Positive parenting techniques</li>
+        <li>Recognizing strengths & learning styles</li>
+        <li>Building strong parent-child relationships</li>
+      </ul>
+    </section>
+
+    <!-- Best Suited For -->
+    <section class="bg-white shadow-xl rounded-3xl p-10 hover:shadow-2xl transition duration-300 text-center">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-600 flex items-center justify-center gap-3">
+        <span class="material-icons text-5xl"> Best Suited For </span>
+      </h2>
+      <p class="text-gray-700 text-xl leading-relaxed max-w-xl mx-auto">
+        Parents, caregivers, and educators who want to effectively nurture children and create a supportive learning environment.
+      </p>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300">
+      <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
+        <span class="material-icons text-4xl"> Key Benefits </span>
+      </h2>
+      <ul class="list-disc list-inside space-y-3 text-indigo-100 text-lg max-w-md mx-auto">
+        <li>Better understanding of children</li>
+        <li>Enhanced parenting skills</li>
+        <li>Supportive learning environment</li>
+        <li>Improved parent-child relationship</li>
+      </ul>
+    </section>
+
+    <!-- Call to Action Button somewhere in content -->
+  <section class="w-full py-12 flex justify-center animate__animated animate__pulse animate__infinite">
+    <button id="openContactBtn" class="bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+      Contact Us
+    </button>
+  </section>
+
+  <!-- Modal HTML near end of body -->
+  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative animate__animated animate__fadeInDown">
+      <button id="closeContactBtn" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
+      <h2 class="text-2xl font-bold mb-4 text-indigo-600">Contact Us</h2>
+      <!-- Contact form or info -->
+    </div>
   </div>
-</header>
 
-<main class="container mx-auto px-6 md:px-12 lg:px-24 mb-16">
-  <p class="text-lg mb-6">
-    A specialized program for parents and educators to understand child psychology, milestones, and effective parenting strategies.
-  </p>
+  <!-- Modal toggle JavaScript just before </body> -->
+  <script>
+const openBtn = document.getElementById('openContactBtn');
+const closeBtn = document.getElementById('closeContactBtn');
+const modal = document.getElementById('contactModal');
 
-  <h2 class="text-2xl font-semibold mb-3">Key Learnings:</h2>
-  <ul class="list-disc list-inside mb-6">
-    <li>Stages of child development</li>
-    <li>Positive parenting techniques</li>
-    <li>Identifying child's strengths & learning styles</li>
-    <li>Building strong parent-child relationships</li>
-  </ul>
+openBtn.addEventListener('click', () => {
+  if (modal.classList.contains('hidden')) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+    openBtn.setAttribute('disabled', 'true'); // optional: disable button while modal open
+  }
+});
 
-  <h2 class="text-2xl font-semibold mb-3">Best Suited For:</h2>
-  <p class="mb-6">Parents, caregivers, and educators who want to nurture children effectively and support holistic development.</p>
+closeBtn.addEventListener('click', () => {
+  if (!modal.classList.contains('hidden')) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = ''; // restore scroll
+    openBtn.removeAttribute('disabled'); // re-enable button
+  }
+});
 
-  <h2 class="text-2xl font-semibold mb-3">Key Benefits:</h2>
-  <ul class="list-disc list-inside">
-    <li>Better understanding of children</li>
-    <li>Enhanced parenting skills</li>
-    <li>Supportive learning environment</li>
-    <li>Improved parent-child relationship</li>
-  </ul>
-</main>
+window.addEventListener('click', (e) => {
+  if (e.target === modal) { // click outside modal to close
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    openBtn.removeAttribute('disabled');
+  }
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    openBtn.removeAttribute('disabled');
+  }
+});
+</script>
+  </main>
 
 </body>
 </html>
