@@ -1,74 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Early Childhood Development & Parenting Skills</title>
-<link href="index2.html" rel="stylesheet">
-<style>
-  /* Close button hover animation */
-  .close-btn {
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    font-weight: bold;
-  }
-  .close-btn:hover {
-    transform: rotate(90deg) scale(1.1);
-    background-color: #4f46e5; /* Darker Indigo */
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DMIT & Psychometric Testing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-gray-800 font-sans">
 
-<header class="bg-white shadow py-6 mb-12 text-center relative">
-  <div class="container mx-auto px-6 md:px-12 lg:px-24">
-    <h1 class="text-4xl font-bold text-indigo-600">Early Childhood Development & Parenting Skills</h1>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="bg-white shadow-md py-8 sticky top-0 z-50">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-600 tracking-tight">
+        DMIT & Psychometric Testing
+      </h1>
+      <p class="mt-3 text-gray-500 text-lg">
+        Unlock your potential with science-backed insights
+      </p>
+    </div>
+  </header>
 
-<!-- Floating Close Button Top-Left -->
-<button 
-  onclick="closePage()" 
-  class="fixed top-6 left-6 bg-indigo-600 text-white rounded-full px-4 py-2 shadow-lg close-btn z-50"
-  aria-label="Close Page"
->
-  ✖
-</button>
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 md:px-12 lg:px-24 my-16 space-y-16">
 
-<main class="container mx-auto px-6 md:px-12 lg:px-24 mb-16">
-  <p class="text-lg mb-6">
-    A specialized program for parents and educators to understand child psychology, milestones, and effective parenting strategies.
-  </p>
+    <!-- Intro -->
+    <section class="bg-white shadow-lg rounded-2xl p-10 hover:shadow-2xl transition duration-300 text-center">
+      <p class="text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
+        Discover your natural talents, personality traits, and learning styles through 
+        <span class="font-semibold text-indigo-600">fingerprint analysis (DMIT)</span> and 
+        detailed psychometric tests.
+      </p>
+    </section>
 
-  <h2 class="text-2xl font-semibold mb-3">Key Learnings:</h2>
-  <ul class="list-disc list-inside mb-6">
-    <li>Stages of child development</li>
-    <li>Positive parenting techniques</li>
-    <li>Identifying child's strengths & learning styles</li>
-    <li>Building strong parent-child relationships</li>
-  </ul>
+    <!-- Key Learnings & Benefits -->
+    <section class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      
+      <!-- Key Learnings -->
+      <div class="bg-indigo-600 text-white rounded-2xl shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-2xl font-bold mb-4 flex justify-center items-center">
+          <span class="material-icons mr-2">lightbulb</span> Key Learnings
+        </h2>
+        <ul class="space-y-2 list-disc list-inside text-indigo-100 text-left mx-auto w-fit">
+          <li>Understand strengths, weaknesses & potential</li>
+          <li>Identify suitable learning styles</li>
+          <li>Get clarity about career choices</li>
+          <li>Boost confidence and self-growth</li>
+        </ul>
+      </div>
 
-  <h2 class="text-2xl font-semibold mb-3">Best Suited For:</h2>
-  <p class="mb-6">Parents, caregivers, and educators who want to nurture children effectively and support holistic development.</p>
+      <!-- Key Benefits -->
+      <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl shadow-lg p-8 hover:scale-105 transition-transform duration-300">
+        <h2 class="text-2xl font-bold mb-4 flex justify-center items-center">
+          <span class="material-icons mr-2">stars</span> Key Benefits
+        </h2>
+        <ul class="space-y-2 list-disc list-inside text-indigo-100 text-left mx-auto w-fit">
+          <li>Improved self-awareness</li>
+          <li>Better decision-making</li>
+          <li>Enhanced learning strategies</li>
+          <li>Personal growth and confidence</li>
+        </ul>
+      </div>
 
-  <h2 class="text-2xl font-semibold mb-3">Key Benefits:</h2>
-  <ul class="list-disc list-inside">
-    <li>Better understanding of children</li>
-    <li>Enhanced parenting skills</li>
-    <li>Supportive learning environment</li>
-    <li>Improved parent-child relationship</li>
-  </ul>
-</main>
+    </section>
 
-<script>
-  function closePage() {
-    // Go back if possible, else try to close the tab
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      window.close();
-    }
-  }
-</script>
+    <!-- Best Suited For -->
+    <section class="bg-white shadow-lg rounded-2xl p-10 hover:shadow-2xl transition duration-300 max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4 text-indigo-600 flex justify-center items-center">
+        <span class="material-icons mr-2">groups</span> Best Suited For
+      </h2>
+      <p class="text-gray-700 text-lg">
+        Students, professionals, and anyone looking to understand themselves better and make informed career or educational choices.
+      </p>
+    </section>
+
+    <!-- ✅ Call to Action -->
+   <section class="w-full py-12 bg-gray-50">
+   <div class="flex justify-center">
+    <a href="#contact"
+       class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition">
+      Contact Us Now To Book Your DMIT
+    </a>
+    </div>
+   </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-6 mt-12">
+    <div class="container mx-auto text-center text-gray-500 text-sm">
+      © 2025 InnoVigyan • All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
