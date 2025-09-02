@@ -1,47 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emotional Wellbeing & Life Coaching</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emotional Wellbeing & Life Coaching</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-gray-800 font-sans">
 
-<header class="bg-white shadow py-6 mb-12">
-  <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
-    <h1 class="text-4xl font-bold text-indigo-600">Emotional Wellbeing & Life Coaching</h1>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="bg-white shadow-md py-10 sticky top-0 z-40">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-700 tracking-tight drop-shadow animate__animated animate__fadeInDown">
+        Emotional Wellbeing & Life Coaching
+      </h1>
+      <p class="mt-3 text-gray-600 text-lg md:text-xl italic animate__animated animate__fadeIn animate__delay-1s">
+        Empower yourself to manage stress, build resilience, and embrace a positive mindset.
+      </p>
+    </div>
+  </header>
 
-<main class="container mx-auto px-6 md:px-12 lg:px-24 mb-16">
-  <p class="text-lg mb-6">
-    Empower yourself to manage stress, build resilience, and develop a positive mindset through life coaching and wellbeing practices.
-  </p>
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 md:px-12 lg:px-24 mb-20 space-y-20 max-w-5xl">
 
-  <h2 class="text-2xl font-semibold mb-3">Key Learnings:</h2>
-  <ul class="list-disc list-inside mb-6">
-    <li>Self-awareness & emotional regulation</li>
-    <li>Stress management techniques</li>
-    <li>Building confidence & self-esteem</li>
-    <li>Goal setting & motivation</li>
-  </ul>
+    <!-- Intro Section -->
+    <section class="bg-white shadow-xl rounded-3xl p-10 hover:shadow-2xl transition duration-300 text-center animate__animated animate__fadeInUp">
+      <p class="text-xl leading-relaxed text-gray-700 max-w-3xl mx-auto">
+        Our holistic coaching blends science-backed strategies with deep emotional support, helping you cultivate lasting balance and confidence in life.
+      </p>
+    </section>
 
-  <h2 class="text-2xl font-semibold mb-3">Best Suited For:</h2>
-  <p class="mb-6">Anyone seeking personal growth, better emotional control, and improved mental wellbeing.</p>
+    <!-- Key Learnings & Benefits Grid -->
+    <section class="grid md:grid-cols-2 gap-10">
 
-  <h2 class="text-2xl font-semibold mb-3">Key Benefits:</h2>
-  <ul class="list-disc list-inside">
-    <li>Reduced stress & anxiety</li>
-    <li>Improved emotional intelligence</li>
-    <li>Better goal achievement</li>
-    <li>Enhanced confidence & self-esteem</li>
-  </ul>
-</main>
+      <!-- Key Learnings -->
+      <div class="bg-indigo-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-500 animate__animated animate__fadeInLeft">
+        <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
+          <span class="material-icons text-4xl">psychology</span> Key Learnings
+        </h2>
+        <ul class="space-y-4 text-indigo-100 text-lg text-left">
+          <li class="flex items-center gap-2"><span class="material-icons">self_improvement</span> Self-awareness & emotional regulation</li>
+          <li class="flex items-center gap-2"><span class="material-icons">spa</span> Stress management techniques</li>
+          <li class="flex items-center gap-2"><span class="material-icons">military_tech</span> Building confidence & self-esteem</li>
+          <li class="flex items-center gap-2"><span class="material-icons">flag</span> Goal setting & motivation</li>
+        </ul>
+      </div>
 
-<footer class="bg-white shadow py-6 text-center">
-  <a href="index2.html" class="text-indigo-600 font-bold hover:underline">← Back to Programs</a>
-</footer>
+      <!-- Key Benefits -->
+      <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-500 animate__animated animate__fadeInRight">
+        <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
+          <span class="material-icons text-4xl">emoji_events</span> Key Benefits
+        </h2>
+        <ul class="space-y-4 text-indigo-100 text-lg text-left">
+          <li class="flex items-center gap-2"><span class="material-icons">sentiment_very_satisfied</span> Reduced stress & anxiety</li>
+          <li class="flex items-center gap-2"><span class="material-icons">insights</span> Improved emotional intelligence</li>
+          <li class="flex items-center gap-2"><span class="material-icons">trending_up</span> Better goal achievement</li>
+          <li class="flex items-center gap-2"><span class="material-icons">verified</span> Enhanced confidence & self-esteem</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Best Suited For -->
+    <section class="bg-white shadow-xl rounded-3xl p-12 hover:shadow-2xl transition duration-300 text-center animate__animated animate__fadeInUp">
+      <h2 class="text-3xl font-bold mb-6 text-indigo-600 flex items-center justify-center gap-3">
+        <span class="material-icons text-indigo-600 text-5xl">groups</span> Best Suited For
+      </h2>
+      <p class="text-gray-700 text-xl leading-relaxed max-w-xl mx-auto">
+        Students, professionals, parents, or anyone seeking personal growth, emotional balance, and clarity in life.
+      </p>
+    </section>
+
+   <!-- Call to Action -->
+  <section class="w-full py-16 flex justify-center animate__animated animate__pulse animate__infinite">
+  <a href="#contact" 
+     class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-12 rounded-full shadow-lg transition transform hover:scale-110 duration-300 ease-in-out">
+    Connect With Us
+  </a>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white py-8 text-center">
+    <p class="text-sm">© 2025 Emotional Wellbeing & Life Coaching. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
