@@ -7,10 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-gray-800 font-sans">
+<body class="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-gray-800 font-sans relative">
+
+  <!-- ❌ Close Button -->
+  <a href="index2.html" 
+     class="absolute top-6 right-6 text-gray-600 hover:text-red-600 text-4xl font-bold z-50 transition-transform duration-300 transform hover:scale-125 hover:rotate-90">
+     &times;
+  </a>
 
   <!-- Header -->
-  <header class="bg-white shadow-md py-8 sticky top-0 z-50">
+  <header class="bg-white shadow-md py-8 sticky top-0 z-40">
     <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-600 tracking-tight">
         DMIT & Psychometric Testing
@@ -76,12 +82,12 @@
 
     <!-- ✅ Call to Action -->
    <section class="w-full py-12 bg-gray-50">
-   <div class="flex justify-center">
-    <a href="#contact"
-       class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition">
-      Contact Us Now To Book Your DMIT
-    </a>
-    </div>
+     <div class="flex justify-center">
+       <a href="index2.html#contact"
+         class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition">
+         Contact Us Now To Book Your DMIT
+       </a>
+     </div>
    </section>
 
   </main>
@@ -89,7 +95,7 @@
   <!-- Footer -->
   <footer class="bg-white border-t py-6 mt-12">
     <div class="container mx-auto text-center text-gray-500 text-sm">
-      © 2025 InnoVigyan • All rights reserved.
+      © InnoVigyan • All rights reserved.
     </div>
   </footer>
 
