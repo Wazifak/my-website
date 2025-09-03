@@ -22,6 +22,12 @@
     </div>
   </header>
 
+  <!-- ❌ Close Button -->
+  <a href="index2.html" 
+     class="absolute top-6 right-6 text-gray-600 hover:text-red-600 text-4xl font-bold z-50 transition-transform duration-300 transform hover:scale-125 hover:rotate-90">
+     &times;
+  </a>
+
   <!-- Main Content -->
   <main class="container mx-auto px-6 md:px-12 lg:px-24 mb-20 max-w-5xl space-y-16">
 
@@ -58,7 +64,7 @@
     <!-- Key Benefits -->
     <section class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300">
       <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
-        <span class="material-icons text-4xl"> Key Benefits </span>
+        <span class="material-icons text-4xl"> Key Benefits 
       </h2>
       <ul class="list-disc list-inside space-y-3 text-indigo-100 text-lg max-w-md mx-auto">
         <li>Better understanding of children</li>
@@ -68,60 +74,14 @@
       </ul>
     </section>
 
-    <!-- Call to Action Button somewhere in content -->
-  <section class="w-full py-12 flex justify-center animate__animated animate__pulse animate__infinite">
-    <button id="openContactBtn" class="bg-indigo-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
-      Contact Us
-    </button>
-  </section>
+    <!-- Call to Action -->
+    <section class="w-full py-12 flex justify-center animate__animated animate__pulse animate__infinite">
+      <a href="index2.html#contact"
+        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition">
+       Contact Us Now 
+   </a>
+    </section>
 
-  <!-- Modal HTML near end of body -->
-  <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative animate__animated animate__fadeInDown">
-      <button id="closeContactBtn" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
-      <h2 class="text-2xl font-bold mb-4 text-indigo-600">Contact Us</h2>
-      <!-- Contact form or info -->
-    </div>
-  </div>
-
-  <!-- Modal toggle JavaScript just before </body> -->
-  <script>
-const openBtn = document.getElementById('openContactBtn');
-const closeBtn = document.getElementById('closeContactBtn');
-const modal = document.getElementById('contactModal');
-
-openBtn.addEventListener('click', () => {
-  if (modal.classList.contains('hidden')) {
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // prevent background scroll
-    openBtn.setAttribute('disabled', 'true'); // optional: disable button while modal open
-  }
-});
-
-closeBtn.addEventListener('click', () => {
-  if (!modal.classList.contains('hidden')) {
-    modal.classList.add('hidden');
-    document.body.style.overflow = ''; // restore scroll
-    openBtn.removeAttribute('disabled'); // re-enable button
-  }
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === modal) { // click outside modal to close
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-    openBtn.removeAttribute('disabled');
-  }
-});
-
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-    openBtn.removeAttribute('disabled');
-  }
-});
-</script>
   </main>
 
 </body>
