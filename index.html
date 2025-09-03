@@ -100,11 +100,12 @@
             padding: 30px;
             border-radius: 0.75rem; /* rounded-xl */
             width: 90%;
-            max-width: 900px; /* Slightly wider for content */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            max-width: 900px;
+            box-shadow: 0 10px 25px rgba(35, 25, 216, 0.25),
+                0 4px 10px rgba(79, 70, 229, 0.15); /* Indigo shadow */
             position: relative;
-            max-height: 90vh; /* Limit height for scrolling */
-            overflow-y: auto; /* Enable scrolling within modal content */
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         .close-button {
@@ -191,7 +192,7 @@
       <a href="index2.html" class="hover:text-indigo-600 transition">Home</a>
       <a href="#about" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">About Us</a>
       <a href="#programs" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Programs</a>
-      <a href="#glimpses" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Glimpses</a>
+      <a href="#glimpses" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Gallery</a>
       <a href="#blog" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Blogs</a>
       <a href="#testimonials" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Testimonials</a>
       <a href="#contact" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Contact</a>
@@ -210,7 +211,7 @@
     <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Home</a>
     <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">About Us</a>
     <a href="#programs" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Programs</a>
-    <a href="#glimpses" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Glimpses</a>
+    <a href="#glimpses" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Gallery</a>
     <a href="#blog" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Blogs</a>
     <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Testimonials</a>
     <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Contact</a>
@@ -274,7 +275,7 @@
           <i class="fas fa-eye text-4xl text-indigo-600 mb-2"></i>
           <h3 class="text-2xl font-semibold text-indigo-600">Vision</h3>
         </div>
-        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base md:text-lg">
+        <ul class="list-disc list-inside text-gray-700 text-sm md:text-base space-y-1">
           <li>Be a trusted partner in shaping confident, skilled, and future-ready individuals.</li>
           <li>Create a learning space where innovation, personal growth, and academic excellence thrive.</li>
           <li>Empower students and professionals to discover their strengths, overcome challenges, and achieve goals.</li>
@@ -287,7 +288,7 @@
           <i class="fas fa-bullseye text-4xl text-indigo-600 mb-2"></i>
           <h3 class="text-2xl font-semibold text-indigo-600">Mission</h3>
         </div>
-        <ul class="list-disc list-inside space-y-2 text-gray-600 text-base md:text-lg">
+        <ul class="list-disc list-inside text-gray-700 text-sm md:text-base space-y-1">
           <li>Prepare students with effective study techniques, focus training, and time management.</li>
           <li>Provide personalized counseling & guidance by DMIT & psychometric tools.</li>
           <li>Equip learners with innovative skills & strategies for academics and life.</li>
@@ -560,9 +561,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
       <!-- Gallery Card: Awards & Recognition -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="A1.jpg" alt="Awards & Recognition" loading="lazy"
+        <img src="a1.jpeg" alt="Awards & Recognition" loading="lazy"
              class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
-             onclick="openGallery(0, 'awards')">
+             onclick="openGallery(0, 'awards')">  
         <div class="p-4">
           <p class="text-md font-semibold text-gray-800">Awards & Recognition</p>
           <p class="text-sm text-gray-600">Celebrating our milestones.</p>
@@ -571,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Gallery Card: Workshops & Interactions -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="w1.jpg" alt="Workshops & Interactions" loading="lazy"
+        <img src="w1.jpeg" alt="Workshops & Interactions" loading="lazy"
              class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
              onclick="openGallery(0, 'workshops')">
         <div class="p-4">
@@ -582,7 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Gallery Card: Memory Championship -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="Memory.jpg" alt="Memory Championship" loading="lazy"
+        <img src="m1.jpeg" alt="Memory Championship" loading="lazy"
              class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
              onclick="openGallery(0, 'memory')">
         <div class="p-4">
@@ -593,7 +594,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Gallery Card: Student Success Stories -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="S1.jpg" alt="Student Success Stories" loading="lazy"
+        <img src="s1.jpeg" alt="Student Success Stories" loading="lazy"
              class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
              onclick="openGallery(0, 'students')">
         <div class="p-4">
@@ -616,10 +617,10 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
   // Galleries data for modal
   const galleries = {
-    awards: ["A1.jpg", "A2.jpg", "A3.jpg"],
-    workshops: ["w1.jpg", "w2.jpg", "w3.jpg"],
-    memory: ["Memory.jpg", "M2.jpg", "M3.jpg"],
-    students: ["S1.jpg", "S2.jpg", "S3.jpg"]
+    awards: ["a1.jpeg", "a2.jpg", "a3.jpeg"],
+    workshops: ["w1.jpeg", "w2.jpg", "w3.jpg"],
+    memory: ["m1.jpeg", "M2.jpg", "M3.jpg"],
+    students: ["s1.jpeg", "S2.jpg", "S3.jpg"]
   };
 
   let currentGallery = [];
@@ -765,55 +766,54 @@ document.addEventListener('DOMContentLoaded', () => {
     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
       What Our Clients Say (Testimonials)
     </h2>
-
     <!-- Horizontal scroll container -->
     <div class="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 py-4">
-      <div class="flex space-x-6 pb-2">
-        <!-- Repeatable testimonial card -->
+      <div class="flex space-x-6 pb-2" id="testimonialImages">
+        <!-- Repeatable testimonial cards for 15 images -->
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="1.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="1.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" data-index="0" onclick="openModal(0)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="2.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="2.png" alt="Testimonial 2" class="rounded-2xl w-full h-auto" loading="lazy" data-index="1" onclick="openModal(1)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="3.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="3.png" alt="Testimonial 3" class="rounded-2xl w-full h-auto" loading="lazy" data-index="2" onclick="openModal(2)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="4.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="4.png" alt="Testimonial 4" class="rounded-2xl w-full h-auto" loading="lazy" data-index="3" onclick="openModal(3)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="5.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="5.png" alt="Testimonial 5" class="rounded-2xl w-full h-auto" loading="lazy" data-index="4" onclick="openModal(4)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="6.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="6.png" alt="Testimonial 6" class="rounded-2xl w-full h-auto" loading="lazy" data-index="5" onclick="openModal(5)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="7.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="7.png" alt="Testimonial 7" class="rounded-2xl w-full h-auto" loading="lazy" data-index="6" onclick="openModal(6)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="8.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="8.png" alt="Testimonial 8" class="rounded-2xl w-full h-auto" loading="lazy" data-index="7" onclick="openModal(7)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="9.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="9.png" alt="Testimonial 9" class="rounded-2xl w-full h-auto" loading="lazy" data-index="8" onclick="openModal(8)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="10.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="10.png" alt="Testimonial 10" class="rounded-2xl w-full h-auto" loading="lazy" data-index="9" onclick="openModal(9)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="11.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="11.png" alt="Testimonial 11" class="rounded-2xl w-full h-auto" loading="lazy" data-index="10" onclick="openModal(10)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="12.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="12.png" alt="Testimonial 12" class="rounded-2xl w-full h-auto" loading="lazy" data-index="11" onclick="openModal(11)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="13.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="13.png" alt="Testimonial 13" class="rounded-2xl w-full h-auto" loading="lazy" data-index="12" onclick="openModal(12)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="14.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="14.png" alt="Testimonial 14" class="rounded-2xl w-full h-auto" loading="lazy" data-index="13" onclick="openModal(13)" />
         </div>
         <div class="flex-shrink-0 w-64 cursor-pointer transition transform hover:scale-105 rounded-2xl shadow-lg">
-          <img src="15.png" alt="Testimonial 1" class="rounded-2xl w-full h-auto" loading="lazy" onclick="openModal(this.src)" />
+          <img src="15.png" alt="Testimonial 15" class="rounded-2xl w-full h-auto" loading="lazy" data-index="14" onclick="openModal(14)" />
         </div>
       </div>
     </div>
@@ -822,25 +822,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- Modal for viewing testimonial images -->
 <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 p-4">
-  <button class="absolute top-5 right-8 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</button>
+  <!-- Close button -->
+  <button class="absolute top-5 right-8 text-white text-4xl font-bold cursor-pointer z-10" onclick="closeModal()">&times;</button>
+  <!-- Left arrow -->
+  <button id="leftArrow" class="absolute left-8 text-white text-5xl font-bold cursor-pointer z-10 p-2 hover:text-gray-400 transition" onclick="prevImage()" aria-label="Previous testimonial">&lt;</button>
+  <!-- Modal Image -->
   <img id="modalImage" src="" class="max-w-full max-h-[90vh] rounded-xl shadow-lg" alt="Testimonial Image" />
+  <!-- Right arrow -->
+  <button id="rightArrow" class="absolute right-8 text-white text-5xl font-bold cursor-pointer z-10 p-2 hover:text-gray-400 transition" onclick="nextImage()" aria-label="Next testimonial">&gt;</button>
 </div>
 
 <script>
-  function openModal(src) {
-    const modal = document.getElementById("imageModal");
-    document.getElementById("modalImage").src = src;
-    modal.classList.remove("hidden");
-    document.body.style.overflow = "hidden"; // prevent background scroll
+  // Use window-scoped variables to avoid redeclaration
+  if (!window.testimonialImagesSetup) {
+    window.testimonialImagesSetup = true; // flag to prevent setup again
+
+    window.testimonialImages = Array.from(document.querySelectorAll('#testimonialImages img'));
+    window.currentIndex = 0;
+
+    window.openModal = function(index) {
+      window.currentIndex = index;
+      document.getElementById("modalImage").src = window.testimonialImages[window.currentIndex].src;
+      document.getElementById("imageModal").classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    };
+    window.closeModal = function() {
+      document.getElementById("imageModal").classList.add("hidden");
+      document.body.style.overflow = "";
+    };
+    window.nextImage = function() {
+      window.currentIndex = (window.currentIndex + 1) % window.testimonialImages.length;
+      document.getElementById("modalImage").src = window.testimonialImages[window.currentIndex].src;
+    };
+    window.prevImage = function() {
+      window.currentIndex = (window.currentIndex - 1 + window.testimonialImages.length) % window.testimonialImages.length;
+      document.getElementById("modalImage").src = window.testimonialImages[window.currentIndex].src;
+    };
+    document.addEventListener("keydown", (e) => {
+      if (document.getElementById("imageModal").classList.contains("hidden")) return;
+      if (e.key === "Escape") window.closeModal();
+      if (e.key === "ArrowRight") window.nextImage();
+      if (e.key === "ArrowLeft") window.prevImage();
+    });
   }
-  function closeModal() {
-    const modal = document.getElementById("imageModal");
-    modal.classList.add("hidden");
-    document.body.style.overflow = ""; // restore scroll
-  }
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
 </script>
 
 <!-- ✅ Seminars & Webinars Section -->
@@ -1062,7 +1086,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="container mx-auto text-center px-6 md:px-12 lg:px-24">
 
     <!-- Brand / Copyright -->
-    <p class="text-gray-400 mb-4">&copy; 2025 InnoVigyan. All rights reserved.</p>
+    <p class="text-gray-400 mb-4">&copy; InnoVigyan. All rights reserved.</p>
 
     <!-- Follow Us -->
     <p class="text-lg font-semibold text-white mb-4">Follow Us For More !!!</p>
