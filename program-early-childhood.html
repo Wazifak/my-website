@@ -7,19 +7,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <style>
-    /* Close button hover animation */
-    .close-btn {
-      transition: transform 0.25s ease, background-color 0.25s ease;
-      font-weight: bold;
-    }
-    .close-btn:hover {
-      transform: rotate(90deg) scale(1.15);
-      background-color: #4338ca; /* Deeper Indigo */
-    }
-  </style>
 </head>
 <body class="bg-gradient-to-br from-indigo-50 via-white to-indigo-100 text-gray-800 font-sans">
+
+  <!-- ❌ Close Button -->
+  <a href="index2.html" 
+     class="absolute top-6 right-6 text-gray-600 hover:text-red-600 text-4xl font-bold z-50 transition-transform duration-300 transform hover:scale-125 hover:rotate-90">
+     &times;
+  </a>
 
   <!-- Header -->
   <header class="bg-white shadow-lg py-10 mb-16 text-center relative">
@@ -33,14 +28,6 @@
     </div>
   </header>
 
-  <!-- Floating Close Button -->
-  <button 
-    onclick="closePage()" 
-    class="fixed top-6 left-6 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 shadow-lg close-btn z-50 flex items-center justify-center"
-    aria-label="Close Page">
-    <span class="material-icons text-xl">close</span>
-  </button>
-
   <!-- Main Content -->
   <main class="container mx-auto px-6 md:px-12 lg:px-24 mb-20 space-y-16 max-w-5xl">
 
@@ -52,7 +39,7 @@
     </section>
 
     <!-- Key Learnings -->
-    <section class="bg-indigo-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300">
+    <section class="bg-indigo-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp animate__delay-1s">
       <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
         <span class="material-icons text-4xl">school</span> Key Learnings
       </h2>
@@ -65,7 +52,7 @@
     </section>
 
     <!-- Best Suited For -->
-    <section class="bg-white shadow-xl rounded-3xl p-10 hover:shadow-2xl transition duration-300 text-center">
+    <section class="bg-white shadow-xl rounded-3xl p-10 hover:shadow-2xl transition duration-300 text-center animate__animated animate__fadeInUp animate__delay-2s">
       <h2 class="text-3xl font-bold mb-6 text-indigo-600 flex items-center justify-center gap-3">
         <span class="material-icons text-5xl">groups</span> Best Suited For
       </h2>
@@ -75,7 +62,7 @@
     </section>
 
     <!-- Key Benefits -->
-    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300">
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl shadow-lg p-10 text-white hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp animate__delay-3s">
       <h2 class="text-3xl font-bold mb-8 flex items-center justify-center gap-3">
         <span class="material-icons text-4xl">emoji_events</span> Key Benefits
       </h2>
@@ -89,9 +76,9 @@
 
     <!-- Call to Action -->
     <section class="w-full py-16 flex justify-center animate__animated animate__pulse animate__infinite">
-      <a href="#contact"
-         class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-12 rounded-full shadow-lg transition transform hover:scale-110 duration-300 ease-in-out">
-        Connect With Us
+      <a href="index2.html#contact"
+        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition">
+       Contact Us Now 
       </a>
     </section>
 
