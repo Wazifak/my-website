@@ -193,8 +193,8 @@
       <a href="#about" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">About Us</a>
       <a href="#programs" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Programs</a>
       <a href="#glimpses" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Gallery</a>
-      <a href="#blog" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Blogs</a>
       <a href="#testimonials" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Testimonials</a>
+      <a href="#blog" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Blogs</a>
       <a href="#contact" class="hover:text-indigo-600 transition" target="_blank" rel="noopener noreferrer">Contact</a>
     </div>
 
@@ -212,8 +212,8 @@
     <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">About Us</a>
     <a href="#programs" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Programs</a>
     <a href="#glimpses" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Gallery</a>
-    <a href="#blog" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Blogs</a>
     <a href="#testimonials" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Testimonials</a>
+    <a href="#blog" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Blogs</a>
     <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Contact</a>
   </div>
 </nav>
@@ -452,7 +452,7 @@
                  <!-- Program Card 6 --> 
                  <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="memory-enhancement"> 
                  <div class="text-indigo-600 mb-4 text-5xl flex justify-center">🧠</div> 
-                 <h3 class="text-xl font-semibold text-center mb-4">Many More</h3> 
+                 <h3 class="text-xl font-semibold text-center mb-4">Others</h3> 
                  <p class="text-gray-600 text-center mb-4">
                    Strengthen memory power using scientific techniques, brain exercises, and recall strategies to boost learning and retention. </p> 
                    <ul class="list-disc list-inside text-sm text-gray-600 text-left">
@@ -546,164 +546,305 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-  <!-- ✅ Our Journey in Glimpses Section -->
+<!-- ✅ Our Journey in Glimpses Section -->
 <section id="glimpses" class="relative z-20 py-8 bg-white fade-in-section">
   <div class="container mx-auto px-6 md:px-12 lg:px-24">
-    <!-- Section Title -->
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
       Glimpses of Our Journey
     </h2>
-     <p class="text-lg text-center mb-6 max-w-3xl mx-auto text-gray-700">
+    <p class="text-lg text-center mb-6 max-w-3xl mx-auto text-gray-700">
       A look at our achievements, workshops, and the vibrant moments from our journey so far.
-     </p>
+    </p>
 
-    <!-- Gallery Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-      <!-- Gallery Card: Awards & Recognition -->
+      
+      <!-- Awards -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="a1.jpeg" alt="Awards & Recognition" loading="lazy"
-             class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
-             onclick="openGallery(0, 'awards')">  
+        <div class="relative w-full h-40 overflow-hidden">
+          <div class="flex transition-transform duration-500 ease-in-out slider-track" id="awardsSlider">
+            <!-- 22 award images -->
+            <div class="w-full flex-shrink-0"><img src="a1.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(0,'awards')" alt="Awards 1"></div>
+            <div class="w-full flex-shrink-0"><img src="a2.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(1,'awards')" alt="Awards 2"></div>
+            <div class="w-full flex-shrink-0"><img src="a3.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(2,'awards')" alt="Awards 3"></div>
+            <div class="w-full flex-shrink-0"><img src="a4.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(3,'awards')" alt="Awards 4"></div>
+            <div class="w-full flex-shrink-0"><img src="a5.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(4,'awards')" alt="Awards 5"></div>
+            <div class="w-full flex-shrink-0"><img src="a6.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(5,'awards')" alt="Awards 6"></div>
+            <div class="w-full flex-shrink-0"><img src="a7.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(6,'awards')" alt="Awards 7"></div>
+            <div class="w-full flex-shrink-0"><img src="a8.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(7,'awards')" alt="Awards 8"></div>
+            <div class="w-full flex-shrink-0"><img src="a9.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(8,'awards')" alt="Awards 9"></div>
+            <div class="w-full flex-shrink-0"><img src="a10.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(9,'awards')" alt="Awards 10"></div>
+            <div class="w-full flex-shrink-0"><img src="a11.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(10,'awards')" alt="Awards 11"></div>
+            <div class="w-full flex-shrink-0"><img src="a12.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(11,'awards')" alt="Awards 12"></div>
+            <div class="w-full flex-shrink-0"><img src="a13.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(12,'awards')" alt="Awards 13"></div>
+            <div class="w-full flex-shrink-0"><img src="a14.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(13,'awards')" alt="Awards 14"></div>
+            <div class="w-full flex-shrink-0"><img src="a15.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(14,'awards')" alt="Awards 15"></div>
+            <div class="w-full flex-shrink-0"><img src="a16.jpg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(15,'awards')" alt="Awards 16"></div>
+            <div class="w-full flex-shrink-0"><img src="a17.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(16,'awards')" alt="Awards 17"></div>
+            <div class="w-full flex-shrink-0"><img src="a18.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(17,'awards')" alt="Awards 18"></div>
+            <div class="w-full flex-shrink-0"><img src="a19.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(18,'awards')" alt="Awards 19"></div>
+            <div class="w-full flex-shrink-0"><img src="a20.jpg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(19,'awards')" alt="Awards 20"></div>
+            <div class="w-full flex-shrink-0"><img src="a21.jpg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(20,'awards')" alt="Awards 21"></div>
+            <div class="w-full flex-shrink-0"><img src="a22.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(21,'awards')" alt="Awards 22"></div>
+          </div>
+          <button onclick="prevSlide('awardsSlider')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10094;</button>
+          <button onclick="nextSlide('awardsSlider')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10095;</button>
+        </div>
         <div class="p-4">
           <p class="text-md font-semibold text-gray-800">Awards & Recognition</p>
           <p class="text-sm text-gray-600">Celebrating our milestones.</p>
         </div>
       </div>
 
-      <!-- Gallery Card: Workshops & Interactions -->
+      <!-- Workshops -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="w1.jpeg" alt="Workshops & Interactions" loading="lazy"
-             class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
-             onclick="openGallery(0, 'workshops')">
+        <div class="relative w-full h-40 overflow-hidden">
+          <div class="flex transition-transform duration-500 ease-in-out slider-track" id="workshopsSlider">
+            <div class="w-full flex-shrink-0"><img src="w1.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(0,'workshops')" alt="Workshop 1"></div>
+            <div class="w-full flex-shrink-0"><img src="w2.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(1,'workshops')" alt="Workshop 2"></div>
+            <div class="w-full flex-shrink-0"><img src="w3.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(2,'workshops')" alt="Workshop 3"></div>
+            <div class="w-full flex-shrink-0"><img src="w4.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(3,'workshops')" alt="Workshop 4"></div>
+            <div class="w-full flex-shrink-0"><img src="w5.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(4,'workshops')" alt="Workshop 5"></div>
+            <div class="w-full flex-shrink-0"><img src="w6.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(5,'workshops')" alt="Workshop 6"></div>
+            <div class="w-full flex-shrink-0"><img src="w7.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(6,'workshops')" alt="Workshop 7"></div>
+            <div class="w-full flex-shrink-0"><img src="w8.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(7,'workshops')" alt="Workshop 8"></div>
+            <div class="w-full flex-shrink-0"><img src="w9.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(8,'workshops')" alt="Workshop 9"></div>
+            <div class="w-full flex-shrink-0"><img src="w10.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(9,'workshops')" alt="Workshop 10"></div>
+            <div class="w-full flex-shrink-0"><img src="w11.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(10,'workshops')" alt="Workshop 11"></div>
+            <div class="w-full flex-shrink-0"><img src="w12.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(11,'workshops')" alt="Workshop 12"></div>
+            <div class="w-full flex-shrink-0"><img src="w13.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(12,'workshops')" alt="Workshop 13"></div>
+            <div class="w-full flex-shrink-0"><img src="w14.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(13,'workshops')" alt="Workshop 14"></div>
+            <div class="w-full flex-shrink-0"><img src="w15.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(14,'workshops')" alt="Workshop 15"></div>
+            <div class="w-full flex-shrink-0"><img src="w16.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(15,'workshops')" alt="Workshop 16"></div>
+            <div class="w-full flex-shrink-0"><img src="w17.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(16,'workshops')" alt="Workshop 17"></div>
+            <div class="w-full flex-shrink-0"><img src="w18.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(17,'workshops')" alt="Workshop 18"></div>
+            <div class="w-full flex-shrink-0"><img src="w19.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(18,'workshops')" alt="Workshop 19"></div>
+            <div class="w-full flex-shrink-0"><img src="w20.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(19,'workshops')" alt="Workshop 20"></div>
+            <div class="w-full flex-shrink-0"><img src="w21.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(20,'workshops')" alt="Workshop 21"></div>
+            <div class="w-full flex-shrink-0"><img src="w22.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(21,'workshops')" alt="Workshop 22"></div>
+            <div class="w-full flex-shrink-0"><img src="w23.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(22,'workshops')" alt="Workshop 23"></div>
+            <div class="w-full flex-shrink-0"><img src="w24.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(23,'workshops')" alt="Workshop 24"></div>
+            <div class="w-full flex-shrink-0"><img src="w25.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(24,'workshops')" alt="Workshop 25"></div>
+            <div class="w-full flex-shrink-0"><img src="w26.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(25,'workshops')" alt="Workshop 26"></div>
+            <div class="w-full flex-shrink-0"><img src="w27.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(26,'workshops')" alt="Workshop 27"></div>
+            <div class="w-full flex-shrink-0"><img src="w28.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(27,'workshops')" alt="Workshop 28"></div>
+            <div class="w-full flex-shrink-0"><img src="w29.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(28,'workshops')" alt="Workshop 29"></div>
+            <div class="w-full flex-shrink-0"><img src="w30.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(29,'workshops')" alt="Workshop 30"></div>
+            <div class="w-full flex-shrink-0"><img src="w31.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(30,'workshops')" alt="Workshop 31"></div>
+            <div class="w-full flex-shrink-0"><img src="w32.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(31,'workshops')" alt="Workshop 32"></div>
+            <div class="w-full flex-shrink-0"><img src="w33.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(32,'workshops')" alt="Workshop 33"></div>
+            <div class="w-full flex-shrink-0"><img src="w34.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(33,'workshops')" alt="Workshop 34"></div>
+          </div>
+          <button onclick="prevSlide('workshopsSlider')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10094;</button>
+          <button onclick="nextSlide('workshopsSlider')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10095;</button>
+        </div>
         <div class="p-4">
           <p class="text-md font-semibold text-gray-800">Workshops & Interactions</p>
           <p class="text-sm text-gray-600">Engaging learning sessions.</p>
         </div>
       </div>
 
-      <!-- Gallery Card: Memory Championship -->
+      <!-- Memory -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="m1.jpeg" alt="Memory Championship" loading="lazy"
-             class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
-             onclick="openGallery(0, 'memory')">
+        <div class="relative w-full h-40 overflow-hidden">
+          <div class="flex transition-transform duration-500 ease-in-out slider-track" id="memorySlider">
+            <div class="w-full flex-shrink-0"><img src="m1.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(0,'memory')" alt="Memory 1"></div>
+            <div class="w-full flex-shrink-0"><img src="m2.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(1,'memory')" alt="Memory 2"></div>
+            <div class="w-full flex-shrink-0"><img src="m3.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(2,'memory')" alt="Memory 3"></div>
+            <div class="w-full flex-shrink-0"><img src="m4.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(3,'memory')" alt="Memory 4"></div>
+            <div class="w-full flex-shrink-0"><img src="m5.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(4,'memory')" alt="Memory 5"></div>
+            <div class="w-full flex-shrink-0"><img src="m6.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(5,'memory')" alt="Memory 6"></div>
+          </div>
+          <button onclick="prevSlide('memorySlider')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10094;</button>
+          <button onclick="nextSlide('memorySlider')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10095;</button>
+        </div>
         <div class="p-4">
           <p class="text-md font-semibold text-gray-800">Indian Memory Championship</p>
           <p class="text-sm text-gray-600">Moments from the competition.</p>
         </div>
       </div>
 
-      <!-- Gallery Card: Student Success Stories -->
+      <!-- Students -->
       <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-        <img src="s1.jpeg" alt="Student Success Stories" loading="lazy"
-             class="w-full h-40 object-cover transition duration-300 transform hover:scale-105 cursor-pointer"
-             onclick="openGallery(0, 'students')">
+        <div class="relative w-full h-40 overflow-hidden">
+          <div class="flex transition-transform duration-500 ease-in-out slider-track" id="studentsSlider">
+            <div class="w-full flex-shrink-0"><img src="s1.jpeg" class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(0,'students')" alt="Student 1"></div>
+            <div class="w-full flex-shrink-0"><img src="s2.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(1,'students')" alt="Student 2"></div>
+            <div class="w-full flex-shrink-0"><img src="s3.jpg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(2,'students')" alt="Student 3"></div>
+            <div class="w-full flex-shrink-0"><img src="s4.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(3,'students')" alt="Student 4"></div>   
+            <div class="w-full flex-shrink-0"><img src="s5.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(4,'students')" alt="Student 5"></div>
+            <div class="w-full flex-shrink-0"><img src="s6.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(5,'students')" alt="Student 6"></div>
+            <div class="w-full flex-shrink-0"><img src="s7.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(6,'students')" alt="Student 7"></div>
+            <div class="w-full flex-shrink-0"><img src="s8.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(7,'students')" alt="Student 8"></div>
+            <div class="w-full flex-shrink-0"><img src="s9.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(8,'students')" alt="Student 9"></div>
+            <div class="w-full flex-shrink-0"><img src="s10.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(9,'students')" alt="Student 10"></div> 
+            <div class="w-full flex-shrink-0"><img src="s11.jpeg"  class="w-full h-40 object-cover cursor-pointer" onclick="Gallery.open(10,'students')" alt="Student 11"></div>
+          </div>
+          <button onclick="prevSlide('studentsSlider')" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10094;</button>
+          <button onclick="nextSlide('studentsSlider')" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-40 text-white rounded-full p-1 text-xs">&#10095;</button>
+        </div>
         <div class="p-4">
           <p class="text-md font-semibold text-gray-800">Student Success Stories</p>
           <p class="text-sm text-gray-600">Our students achieving greatness.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ✅ Fullscreen Gallery Modal -->
+<!-- Fullscreen Gallery Modal -->
 <div id="galleryModal" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity duration-500">
-  <button class="absolute top-5 right-8 text-white text-4xl font-bold hover:text-gray-200" onclick="closeGallery()">&times;</button>
-  <button class="absolute left-5 text-white text-3xl hover:text-gray-200" onclick="prevImage()">&#10094;</button>
+  <button class="absolute top-5 right-8 text-white text-4xl font-bold hover:text-gray-200" onclick="Gallery.close()">&times;</button>
+  <button class="absolute left-5 text-white text-3xl hover:text-gray-200" onclick="Gallery.prev()">&#10094;</button>
   <img id="galleryImage" src="" alt="Gallery Image" class="max-w-full max-h-[80vh] rounded-lg shadow-lg transition-transform duration-500">
-  <button class="absolute right-5 text-white text-3xl hover:text-gray-200" onclick="nextImage()">&#10095;</button>
+  <button class="absolute right-5 text-white text-3xl hover:text-gray-200" onclick="Gallery.next()">&#10095;</button>
 </div>
 
 <script>
-  // Galleries data for modal
-  const galleries = {
-    awards: ["a1.jpeg", "a2.jpg", "a3.jpeg"],
-    workshops: ["w1.jpeg", "w2.jpg", "w3.jpg"],
-    memory: ["m1.jpeg", "M2.jpg", "M3.jpg"],
-    students: ["s1.jpeg", "S2.jpg", "S3.jpg"]
-  };
+  // Gallery handling
+  window.Gallery = (function () {
+    const galleries = {
+      awards: [
+        "a1.jpeg","a2.jpg","a3.jpeg","a4.jpg","a5.jpg","a6.jpeg","a7.jpeg","a8.jpg",
+        "a9.jpeg","a10.jpeg","a11.jpeg","a12.jpeg","a13.jpeg","a14.jpeg",
+        "a15.jpeg","a16.jpg","a17.jpeg","a18.jpeg","a19.jpeg","a20.jpg",
+        "a21.jpg","a22.jpeg"
+      ],
+      workshops: ["w1.jpeg","w2.jpeg","w3.jpg","w4.jpeg","w5.jpg","w6.jpeg","w7.jpeg",
+      "w8.jpg","w9.jpeg","w10.jpeg","w11.jpg","w12.jpg","w13.jpg","w14.jpeg","w15.jpeg",
+      "w16.jpeg","w17.jpeg","w18.jpeg","w19.jpeg","w20.jpeg","w21.jpg","w22.jpeg","w23.jpeg",
+      "w24.jpeg","w25.jpeg","w26.jpeg","w27.jpeg","w28.jpg","w29.jpeg","w30.jpeg","w31.jpeg",
+      "w32.jpeg","w33.jpeg","w34.jpeg"
+      ],
+      memory: ["m1.jpeg","m2.jpeg","m3.jpeg","m4.jpeg","m5.jpeg","m6.jpeg"],
+      students: ["s1.jpeg","s2.jpeg","s3.jpg","s4.jpeg","s5.jpeg","s6.jpeg","s7.jpeg","s8.jpeg",
+      "s9.jpeg","s10.jpeg","s11.jpeg"]
+    };
 
-  let currentGallery = [];
-  let currentIndex = 0;
+    let currentGallery = [];
+    let currentIndex = 0;
 
-  function openGallery(index, galleryName) {
-    currentGallery = galleries[galleryName];
-    currentIndex = index;
-    document.getElementById("galleryImage").src = currentGallery[currentIndex];
-    document.getElementById("galleryModal").classList.remove("hidden");
-    document.body.style.overflow = 'hidden';
+    function open(index, galleryName) {
+      if (!galleries[galleryName]) return;
+      currentGallery = galleries[galleryName];
+      currentIndex = index || 0;
+      document.getElementById("galleryImage").src = currentGallery[currentIndex];
+      document.getElementById("galleryModal").classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function close() {
+      document.getElementById("galleryModal").classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function next() {
+      if (!currentGallery.length) return;
+      currentIndex = (currentIndex + 1) % currentGallery.length;
+      document.getElementById("galleryImage").src = currentGallery[currentIndex];
+    }
+
+    function prev() {
+      if (!currentGallery.length) return;
+      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+      document.getElementById("galleryImage").src = currentGallery[currentIndex];
+    }
+
+    document.addEventListener("keydown", (e) => {
+      const modal = document.getElementById("galleryModal");
+      if (!modal || modal.classList.contains("hidden")) return;
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "Escape") close();
+    });
+
+    return { open, close, next, prev, galleries };
+  })();
+
+  // Slider handling
+  const slidePositions = {};
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.slider-track').forEach(slider => {
+      if (!slider.id) slider.id = 'slider-' + Math.random().toString(36).slice(2, 9);
+      slidePositions[slider.id] = 0;
+      updateSliderTransform(slider, 0);
+    });
+  });
+
+  function nextSlide(id) {
+    const slider = document.getElementById(id);
+    if (!slider) return;
+    const total = slider.children.length;
+    slidePositions[id] = (slidePositions[id] || 0) + 1;
+    if (slidePositions[id] >= total) slidePositions[id] = 0;
+    updateSliderTransform(slider, slidePositions[id]);
   }
 
-  function closeGallery() {
-    document.getElementById("galleryModal").classList.add("hidden");
-    document.body.style.overflow = '';
+  function prevSlide(id) {
+    const slider = document.getElementById(id);
+    if (!slider) return;
+    const total = slider.children.length;
+    slidePositions[id] = (slidePositions[id] || 0) - 1;
+    if (slidePositions[id] < 0) slidePositions[id] = total - 1;
+    updateSliderTransform(slider, slidePositions[id]);
   }
 
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % currentGallery.length;
-    document.getElementById("galleryImage").src = currentGallery[currentIndex];
+  function updateSliderTransform(slider, index) {
+    const containerWidth = slider.parentElement.clientWidth;
+    slider.style.transform = `translateX(-${index * containerWidth}px)`;
   }
 
-  function prevImage() {
-    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-    document.getElementById("galleryImage").src = currentGallery[currentIndex];
-  }
-
-  // Keyboard controls for better UX
-  document.addEventListener("keydown", (e) => {
-    if (document.getElementById("galleryModal").classList.contains("hidden")) return;
-    if (e.key === "ArrowRight") nextImage();
-    if (e.key === "ArrowLeft") prevImage();
-    if (e.key === "Escape") closeGallery();
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.slider-track').forEach(slider => {
+      const id = slider.id;
+      const idx = slidePositions[id] || 0;
+      updateSliderTransform(slider, idx);
+    });
   });
 </script>
 
-   <!-- Why Choose Us Section -->
-<section id="why-choose-us" class="relative z-20 bg-gray-50 py-8 md:py-12">
+   <!-- 🌟 Why Choose Us Section -->
+<section id="why-choose-us" class="relative z-20 bg-gray-50 py-16">
   <div class="container mx-auto px-6 md:px-12 lg:px-24">
-
     <!-- Title -->
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
-      Why Choose Us (Our USP)
+      Why Choose Us <span class="text-indigo-600">(Our USP)</span>
     </h2>
-
     <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-      <!-- Card 1: Our Mentors -->
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 cursor-pointer">
-        <div class="text-6xl mb-6 flex justify-center">👩‍🏫</div>
-        <h3 class="text-xl font-semibold text-indigo-700 mb-4 text-center">Our Mentors</h3>
-        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1: Mentors -->
+      <div class="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-400 border border-indigo-50 hover:border-indigo-200 hover:-translate-y-3 hover:scale-105 cursor-pointer">
+        <div class="text-6xl mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">👩‍🏫</div>
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 text-center group-hover:text-indigo-900 transition-colors font-display">World-Class Mentors</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 text-base leading-relaxed text-left">
           <li>Innovators, Scholars & Researchers</li>
-          <li>Globally certified NLP practitioners, Life Coaches & Career Counselors</li>
+          <li>NLP Practitioners, Life Coaches & Counselors</li>
           <li>University Gold Medalists, Principals & Trainers</li>
         </ul>
       </div>
 
-      <!-- Card 2: Our Courses -->
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 cursor-pointer">
-        <div class="text-6xl mb-6 flex justify-center">📚</div>
-        <h3 class="text-xl font-semibold text-indigo-700 mb-4 text-center">Our Courses</h3>
-        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
-          <li>Niched & To-the-point content</li>
-          <li>Practical and Result-Oriented</li>
-          <li>Prepared by industry/domain experts</li>
-          <li>Tried & Tested methodologies</li>
+      <!-- Card 2: Courses -->
+      <div class="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-400 border border-indigo-50 hover:border-indigo-200 hover:-translate-y-3 hover:scale-105 cursor-pointer">
+        <div class="text-6xl mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">📚</div>
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 text-center group-hover:text-indigo-900 transition-colors font-display">Expert-Led Courses</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 text-base leading-relaxed text-left">
+          <li>Focused, Practical Curriculum</li>
+          <li>Result-Oriented Projects</li>
+          <li>Prepared by Industry Leaders</li>
+          <li>Proven Methodologies</li>
         </ul>
       </div>
 
-      <!-- Card 3: Our Causes -->
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-2 cursor-pointer">
-        <div class="text-6xl mb-6 flex justify-center">❤️</div>
-        <h3 class="text-xl font-semibold text-indigo-700 mb-4 text-center">Our Causes</h3>
-        <ul class="list-disc list-inside text-gray-600 space-y-2 text-sm">
-          <li>Impactful in real-time education system</li>
-          <li>Platform for scientific studies & innovation</li>
-          <li>Best-in-class content at budget-friendly fees</li>
+      <!-- Card 3: Causes -->
+      <div class="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-400 border border-indigo-50 hover:border-indigo-200 hover:-translate-y-3 hover:scale-105 cursor-pointer">
+        <div class="text-6xl mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">❤️</div>
+        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 text-center group-hover:text-indigo-900 transition-colors font-display">Driven By Purpose</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 text-base leading-relaxed text-left">
+          <li>Impactful, Real-Time Education</li>
+          <li>Platform for Scientific Innovation</li>
+          <li>Best Quality, Affordable Fees</li>
         </ul>
       </div>
-
     </div>
   </div>
 </section>
@@ -747,7 +888,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.5 });
 
-  observer.observe(document.querySelector('section.bg-indigo-50'));
+  observer.observe(document.querySelector('#why-choose-us'));
 </script>
 
 <!-- Responsive Video Section --> 
