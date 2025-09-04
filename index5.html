@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoVigyan - Ideas | Innovation | Skills Enhancement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            margin: 0;
+        }
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Basic focus outline for accessibility */
+        *:focus {
+            outline: 2px solid #6366f1; /* Indigo-500 */
+            outline-offset: 2px;
+            border-radius: 0.375rem; /* Matches Tailwind's rounded-md */
+        }
+
+        /* Keyframe animations for scroll-in effects */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Specific animation for hero elements */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Modal specific styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border-radius: 0.75rem; /* rounded-xl */
+            width: 90%;
+            max-width: 900px; /* Slightly wider for content */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            position: relative;
+            max-height: 90vh; /* Limit height for scrolling */
+            overflow-y: auto; /* Enable scrolling within modal content */
+        }
+
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Table styling for modal content */
+        .modal-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .modal-content th, .modal-content td {
+            border: 1px solid #e2e8f0; /* Tailwind gray-200 */
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .modal-content th {
+            background-color: #f1f5f9; /* Tailwind gray-100 */
+            font-weight: 600;
+        }
+        .modal-content ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .modal-content ol {
+            list-style: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <nav class="bg-white shadow-sm py-4 px-6 md:px-12 lg:px-24 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-md p-2 hover:bg-indigo-50 transition duration-300">
+                Inno<span class="text-gray-900">Vigyan</span>
+            </a>
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">About Us</a>
+                <a href="#director-desk" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Director's Desk</a>
+                <a href="#programs" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Programs</a>
+                <a href="#glimpses" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Glimpses</a>
+                <a href="#seminars" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Seminars</a>
+                <a href="#why-choose-us" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Why Choose Us</a>
+                <a href="#upcoming-plans" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Upcoming Plans</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2 hover:bg-gray-100">Contact</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-indigo-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-lg shadow-lg py-2">
+            <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Home</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">About Us</a>
+            <a href="#director-desk" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Director's Desk</a>
+            <a href="#programs" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Programs</a>
+            <a href="#glimpses" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Glimpses</a>
+            <a href="#seminars" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Seminars</a>
+            <a href="#why-choose-us" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Why Choose Us</a>
+            <a href="#upcoming-plans" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Upcoming Plans</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition duration-300">Contact</a>
+        </div>
+    </nav>
+            
+<section id="home" 
+    class="relative min-h-screen w-full bg-cover bg-center flex flex-col"
+    style="background-image: url('https://via.placeholder.com/1920x1080/6366f1/ffffff?text=InnoVigyan+Hero');">
+
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-600/20"></div>
+
+    <div class="relative z-10 flex flex-1 flex-col items-center justify-start text-center px-6 md:px-12 lg:px-24 pt-32">
+        <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-4 text-white">
+            INNOVIGYAN
+        </h1>
+        <p class="text-2xl md:text-3xl font-semibold mb-6 opacity-90 text-white">
+            Ideas | Innovation | Counselling | Skills Enhancement
+        </p>
+        <a href="#programs" 
+           class="inline-block bg-white text-indigo-600 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+           Explore Our Programs
+        </a>
+    </div>
+</section>
+
+
+    <section id="about" class="py-16 md:py-24 bg-white fade-in-section">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      About InnoVigyan
+    </h2>
+
+    <div class="mb-12 text-lg leading-relaxed">
+      <h3 class="text-2xl font-semibold text-indigo-600 mb-4">
+        What is InnoVigyan?
+      </h3>
+      <p class="text-gray-700">
+        InnoVigyan = Innovation + Vigyan (Science). It's an initiative to provide an ultimate platform to upskill oneself 
+        in a scientific & smarter way.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <div>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Vision</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left text-sm">
+          <li>To be a trusted partner in shaping confident, skilled, and future-ready individuals.</li>
+          <li>To create a learning space where innovation, personal growth, and academic excellence go hand in hand.</li>
+          <li>To empower students and professionals to discover their strengths, overcome challenges, and achieve their goals.</li>
+        </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">Mission</h3>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 text-left text-sm">
+          <li>Prepare students for exams with effective study techniques, focus training and time management.</li>
+          <li>Provide personalized counseling & guidance backed by DMIT & psychometric tools.</li>
+          <li>Equip learners with innovative skills & strategies for both academics & life.</li>
+          <li>Offer life coaching to build resilience, confidence & emotional well-being.</li>
+        </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="director-desk" class="py-16 md:py-24 bg-gray-100 fade-in-section">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">From Director's Desk</h2>
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md flex flex-col md:flex-row items-start gap-8">
+            <div class="md:w-1/4 flex justify-center md:block">
+                <img src="https://via.placeholder.com/200x200?text=Director" alt="Director" class="rounded-full w-44 h-44 object-cover shadow-lg">
+            </div>
+            <div class="md:w-3/4 text-lg leading-relaxed text-gray-700">
+                <p class="mb-4">
+                    Welcome to InnoVigyan – a center for Innovation & skills enhancement! It has started dedicated to create awareness and help individuals in the journey of Innovation & being skillful. Our Director Mr. Moazzam Kapde who is an Electrical Engineer by profession is also a full-time researcher-cum-innovator too.
+                </p>
+                <p class="mb-4">
+                    Currently he is having multiple provisional Patent Applications filed on his name. Out of which one is on the way to be the 35 countries based PCT and multiple to be complete Indian Patents. He has won several National and State level research paper presentations and Innovative project competitions.
+                </p>
+                <p class="mb-4">
+                    Recently in July 2021 he got awarded by the "InSc Young Researcher Award 2021" by InSc, Bangalore. Moreover, he is a director of his MSME reg. firm "Kapde Electrical Services" too. We are aiming to help our Nation be Aatmanirbhar with the help of real Innovations.
+                </p>
+                <p>
+                    We have prepared in-depth and well structured programs to help you to experience everything about Innovation from start to very end. Simultaneously we have designed few special programs to help you with your Exam preparation, career counselling in the field of engineering and to convert your expertise into a profitable online course etc. If you have any query feel free to connect with us anytime! We would be more than happy to help.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-16 md:py-24 bg-white fade-in-section">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <h3 class="text-3xl font-bold text-center mb-10">Founded & Lead by</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+        <img src="https://via.placeholder.com/200x200?text=Moazzam+Kapde" alt="Mr. Moazzam Kapde" class="rounded-full w-36 h-36 object-cover mb-6 shadow-lg">
+        <h4 class="text-xl font-semibold text-indigo-700 mb-2">Mr. Moazzam Kapde</h4>
+        <p class="text-gray-600 mb-4">Innovator, Researcher, Educator. Empowering minds for the future.</p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full max-w-md">
+          <li>Award Winning Innovator and EV R&D engineer</li>
+          <li>Memory Researcher and Study Skills Specialist</li>
+          <li>Official Jury for Maharashtra State Innovation Society and Certified Arbiter for Indian Memory Sports Council</li>
+          <li>NLP Practitioner, Mindset Trainer, Speaker & Counselor</li>
+          <li>Trainer and Mentor to 2000+ students across Globe</li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+        <img src="https://via.placeholder.com/200x200?text=Sadiya+Modak" alt="Miss. Sadiya Modak" class="rounded-full w-36 h-36 object-cover mb-6 shadow-lg">
+        <h4 class="text-xl font-semibold text-indigo-700 mb-2">Ms. Sadiya Modak Kapde</h4>
+        <p class="text-gray-600 mb-4">Life Coach, NLP Master, Counselor. Unlocking potential, shaping futures.</p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left w-full max-w-md">
+          <li>Globally Certified NLP Master Practitioner and Life Coach</li>
+          <li>Globally Certified Emotional Intelligence Practitioner</li>
+          <li>Certified DMIT and Psychometric testing Expert</li>
+          <li>Post Graduate Diploma in Modern Applied Psychology</li>
+          <li>Career Counsellor, Child and Parental Counseling Specialist</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-lg mt-10 text-gray-700">
+        We are supported by a team of experts including <b>Pune University Gold-Medalist, Trainers, Counselors, Mentors, Coaches and Experts of diversified domains.</b>
+    </p>
+  </div>
+</section>
+
+   <section id="programs" class="py-16 md:py-24 bg-gray-50 fade-in-section">
+  <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Top Programs</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="memory-masters">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain">
+            <path d="M12 5a3 3 0 1 0-3 3c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6a3 3 0 1 0 0 6c.38.88.93 1.74 1.67 2.5.14.2.27.4.4.6C7.2 17.7 8 18 9 18a3 3 0 1 0 0-6c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6Z" transform="translate(9 0)"/>
+            <path d="M12 5a3 3 0 1 0-3 3c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6a3 3 0 1 0 0 6c.38.88.93 1.74 1.67 2.5.14.2.27.4.4.6C7.2 17.7 8 18 9 18a3 3 0 1 0 0-6c-.38-.88-.93-1.74-1.67-2.5-.14-.2-.27-.4-.4-.6C6.8 6.3 6 6 5 6Z" transform="translate(0 9)"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Memory Masters</h3>
+        <p class="text-gray-600 text-center mb-4"> Unlock your brain's full potential with our scientifically designed memory enhancement programs. </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Smart Studies Program</li>
+          <li>Memory Champion Program</li>
+          <li>Preparation for Indian Memory Championship</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="teaching-titans">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-cog">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a10 10 0 0 0-9 5.5l.3.2A7 7 0 0 1 12 8a7 7 0 0 1 8.7 4.3l.3-.2A10 10 0 0 0 12 2z"/>
+            <path d="M16 17a4 4 0 1 1-8 0"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Teaching Titans</h3>
+        <p class="text-gray-600 text-center mb-4"> Empowering educators with advanced teaching methodologies and professional development. </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Teacher Training Program</li>
+          <li>Career Counselling Program</li>
+          <li>Classroom Management & Innovative Teaching</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="ignited-innovators">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb-off">
+            <path d="M9 13a6 6 0 1 0 6.6-8.7"/>
+            <path d="M14.9 14.9a6 6 0 0 0-8.5-8.5"/>
+            <path d="M17.34 17.34a6 6 0 0 0 2.22-3.86"/>
+            <path d="M12 22a4 4 0 0 0 4-4"/>
+            <path d="M8 18a4 4 0 0 0-4-4"/>
+            <path d="m2 2 20 20"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Ignited Innovators</h3>
+        <p class="text-gray-600 text-center mb-4"> Fostering creativity and innovation to cultivate the next generation of problem-solvers. </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Creativity Enhancement Program</li>
+          <li>Ultimate Innovation Program</li>
+          <li>Patent Filing & Research Publication</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 cursor-pointer program-card" data-program="communication-catalyst">
+        <div class="text-indigo-600 mb-4 text-5xl flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-code">
+            <path d="M7.9 20A9 9 0 0 1 4 16.1L2 22l5.9-2Z"/>
+            <path d="M10.8 12.3c-.62.4-1.29.62-2.02.62a2.8 2.8 0 0 1-2.01-.62m4.03.62a2.8 2.8 0 0 0 2.02-.62"/>
+            <path d="M16 17a9 9 0 1 0-9-9c0 1.29.22 2.6.62 4.03"/>
+            <path d="m18 13-2 2-2-2"/>
+            <path d="m14 11 2-2 2 2"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-4">Communication Catalyst</h3>
+        <p class="text-gray-600 text-center mb-4"> Improve your public speaking, presentation, and overall communication skills. </p>
+        <ul class="list-disc list-inside text-sm text-gray-600 text-left">
+          <li>Public Speaking Workshops</li>
+          <li>Personality Development</li>
+          <li>Professional Interview Training</li>
+        </ul>
+        <button class="mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full shadow-md hover:bg-indigo-700 transform hover:scale-105 transition duration-300 w-full">View Details</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="seminars" class="py-16 md:py-24 bg-white fade-in-section">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Top Seminars & Workshops</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                <div class="text-indigo-600 mb-4 text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Memory & Study Skills</h3>
+                <p class="text-gray-600 mb-4">Revolutionize your study habits and achieve academic excellence with our proven techniques.</p>
+                <button class="bg-indigo-500 text-white font-bold py-2 px-6 rounded-full hover:bg-indigo-600 transition duration-300">Learn More</button>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                <div class="text-indigo-600 mb-4 text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles">
+                        <path d="M9.9 14.9c.4-1 .7-2 .9-3.1.2-.8.5-1.5.9-2.3.2-.5.5-1.1.9-1.6.4-.4.8-.8 1.3-.9.5-.1 1-.1 1.5.1.5.2 1 .5 1.4.9.4.4.8.8 1.1 1.4.3.6.5 1.2.7 1.9.2.7.3 1.5.4 2.2.1.8.2 1.6.1 2.3-.1 1-.2 2-.4 3-.1.6-.3 1.3-.5 1.9-.2.5-.5 1.1-.9 1.6-.4.4-.8.8-1.3.9-.5.1-1 .1-1.5-.1-.5-.2-1-.5-1.4-.9-.4-.4-.8-.8-1.1-1.4-.3-.6-.5-1.2-.7-1.9-.2-.7-.3-1.5-.4-2.2-.1-.8-.2-1.6-.1-2.3z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Innovation & Creativity</h3>
+                <p class="text-gray-600 mb-4">Learn the systematic process of innovation and creativity to solve problems effectively.</p>
+                <button class="bg-indigo-500 text-white font-bold py-2 px-6 rounded-full hover:bg-indigo-600 transition duration-300">Learn More</button>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                <div class="text-indigo-600 mb-4 text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                        <line x1="9" x2="9.01" y1="9" y2="9"/>
+                        <line x1="15" x2="15.01" y1="9" y2="9"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Personality Development</h3>
+                <p class="text-gray-600 mb-4">Boost your confidence, improve communication, and build a positive mindset for success.</p>
+                <button class="bg-indigo-500 text-white font-bold py-2 px-6 rounded-full hover:bg-indigo-600 transition duration-300">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why-choose-us" class="py-16 md:py-24 bg-gray-50 fade-in-section">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="text-indigo-600 text-5xl mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M15.477 10.428A3.992 3.992 0 0 1 12 12c-2.21 0-4-1.79-4-4s1.79-4 4-4a4.004 4.004 0 0 1 3.477 1.838"/>
+                        <path d="M12 21l-3-3h6l-3 3z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Experienced Mentors</h3>
+                <p class="text-gray-600">Learn from award-winning innovators, researchers, and globally certified experts.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="text-indigo-600 text-5xl mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-check">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <polyline points="16 11 18 13 22 9"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Personalized Attention</h3>
+                <p class="text-gray-600">Benefit from one-on-one sessions and customized learning paths tailored to your needs.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="text-indigo-600 text-5xl mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code">
+                        <polyline points="16 18 22 12 16 6"/>
+                        <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Practical & Project-Based</h3>
+                <p class="text-gray-600">Gain hands-on experience by working on real-world projects and case studies.</p>
+            </div>
+            <div class="p-6 rounded-xl bg-white shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                <div class="text-indigo-600 text-5xl mb-4 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-growth">
+                        <path d="M8 8a3.5 3.5 0 0 0 3.5-3.5V2h-3l-2 2h-1a3.5 3.5 0 0 0-3.5 3.5v2h3l2-2h1a3.5 3.5 0 0 0 3.5-3.5z"/>
+                        <path d="M16 16a3.5 3.5 0 0 0-3.5 3.5V22h3l2-2h1a3.5 3.5 0 0 0 3.5-3.5v-2h-3l-2 2h-1a3.5 3.5 0 0 0-3.5 3.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Holistic Development</h3>
+                <p class="text-gray-600">Our programs focus on building a well-rounded personality, not just academic skills.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="upcoming-plans" class="py-16 md:py-24 bg-gray-100 fade-in-section">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Upcoming Plans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+                <div class="text-indigo-600 mb-4 text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2">
+                        <polyline points="16 18 22 12 16 6"/>
+                        <polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Skill-based Training</h3>
+                <p class="text-gray-600 mb-4">We are launching short-term, intensive courses on specific high-demand skills.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+                <div class="text-indigo-600 mb-4 text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-robot">
+                        <path d="M16 18v1a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-1"/>
+                        <path d="M12 15h0"/>
+                        <circle cx="12" cy="9" r="2"/>
+                        <path d="M18 10a8 8 0 1 1-12 0"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">AI & ML Workshops</h3>
+                <p class="text-gray-600 mb-4">Future workshops will focus on the latest technologies like Artificial Intelligence and Machine Learning.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center">
+                <div class="text-indigo-600 mb-4 text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10a15.3 15.3 0 0 1-4 10a15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">International Collaborations</h3>
+                <p class="text-gray-600 mb-4">We are planning to partner with international organizations to offer global certification programs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="py-16 md:py-24 bg-white fade-in-section">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-xl font-bold text-white hover:text-indigo-400 transition duration-300">InnoVigyan</a>
+                <p class="text-sm mt-2">© 2024 InnoVigyan. All rights reserved.</p>
+            </div>
+            <div class="space-x-6">
+                <a href="https://www.facebook.com/innovigyan" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                <a href="https://www.linkedin.com/company/innovigyan" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+                <a href="https://www.instagram.com/innovigyan" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="program-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title" class="text-2xl font-bold text-indigo-600 mb-4"></h2>
+            <div id="modal-body" class="text-gray-700 leading-relaxed">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        const fadeSections = document.querySelectorAll('.fade-in-section');
+
+        // Toggle mobile menu visibility
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Function to check if an element is in the viewport
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Function to handle scroll and show fade-in sections
+        function handleScroll() {
+            fadeSections.forEach(section => {
+                if (isElementInViewport(section)) {
+                    section.classList.add('is-visible');
+                }
+            });
+        }
+
+        // Initial check on page load
+        document.addEventListener('DOMContentLoaded', handleScroll);
+        // Event listener for scroll
+        window.addEventListener('scroll', handleScroll);
+
+        // Modal functionality
+        const programModal = document.getElementById('program-modal');
+        const closeModalButton = document.querySelector('.close-button');
+        const programCards = document.querySelectorAll('.program-card');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+
+        // Program details
+        const programDetails = {
+            'memory-masters': {
+                title: 'Memory Masters',
+                content: `
+                    <p class="mb-4">Our Memory Masters program is designed to transform your learning and recall abilities. Using scientifically-backed techniques, we help you unlock your brain's full potential for academics, professional development, and personal growth.</p>
+                    <p class="font-bold">Key Components:</p>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600">
+                        <li><strong>Smart Studies Program:</strong> Effective study methods, time management, and focus training.</li>
+                        <li><strong>Memory Champion Program:</strong> Advanced memory techniques for remembering numbers, names, dates, and more.</li>
+                        <li><strong>Preparation for Indian Memory Championship:</strong> Specialized training for competitive memory sports.</li>
+                        <li><strong>Bonus:</strong> Live Q&A with Memory Champion, Brain Gym activities, and more.</li>
+                    </ol>
+                `
+            },
+            'teaching-titans': {
+                title: 'Teaching Titans',
+                content: `
+                    <p class="mb-4">This program empowers educators with modern teaching methodologies, ensuring they are equipped to meet the challenges of the 21st-century classroom.</p>
+                    <p class="font-bold">Key Components:</p>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600">
+                        <li><strong>Teacher Training Program:</strong> Innovative teaching strategies and curriculum development.</li>
+                        <li><strong>Career Counselling Program:</strong> Tools and techniques to guide students toward their ideal career paths.</li>
+                        <li><strong>Classroom Management & Innovative Teaching:</strong> Strategies for creating an engaging and effective learning environment.</li>
+                    </ol>
+                `
+            },
+            'ignited-innovators': {
+                title: 'Ignited Innovators',
+                content: `
+                    <p class="mb-4">Ignited Innovators is our flagship program dedicated to fostering a culture of creativity and innovation. We guide participants through the entire innovation lifecycle, from idea generation to patent filing.</p>
+                    <p class="font-bold">Key Components:</p>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600">
+                        <li><strong>Creativity Enhancement Program:</strong> Techniques to unleash your creative potential.</li>
+                        <li><strong>Ultimate Innovation Program:</strong> A step-by-step guide to the innovation process.</li>
+                        <li><strong>Patent Filing & Research Publication:</strong> Practical workshops on drafting patent applications and publishing research papers.</li>
+                        <li><strong>Live Case Study:</strong> Participants will work on a live project and learn from a real-world case study.</li>
+                        <li><strong>Idea Validation & Market Research:</strong> Learn how to test your ideas and understand the market.</li>
+                        <li><strong>Practical Innovation & Filing Provisional Indian Patent:</strong> Hands-on experience with prototyping and filing a provisional patent.</li>
+                        <li><strong>Idea Licensing & Post Patent Steps:</strong> Understand licensing, royalties, and next steps after patent filing.</li>
+                        <li><strong>Research Paper Publication:</strong> Guidance on writing and publishing research papers with plagiarism checks.</li>
+                        <li><strong>Bonus:</strong> Exclusive Q&A with the program director, Mr. Moazzam Kapde.</li>
+                    </ol>
+                `
+            },
+            'communication-catalyst': {
+                title: 'Communication Catalyst',
+                content: `
+                    <p class="mb-4">Our Communication Catalyst program is designed to enhance your public speaking, presentation, and overall communication skills, which are crucial for success in any field.</p>
+                    <p class="font-bold">Key Components:</p>
+                    <ol class="list-decimal list-inside space-y-2 text-sm text-gray-600">
+                        <li><strong>Public Speaking Workshops:</strong> Overcome stage fear and deliver impactful presentations.</li>
+                        <li><strong>Personality Development:</strong> Build confidence, improve body language, and project a positive image.</li>
+                        <li><strong>Professional Interview Training:</strong> Master the art of professional interviews with mock sessions and personalized feedback.</li>
+                    </ol>
+                `
+            }
+        };
+
+        programCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const programId = card.dataset.program;
+                const details = programDetails[programId];
+                if (details) {
+                    modalTitle.textContent = details.title;
+                    modalBody.innerHTML = details.content;
+                    programModal.style.display = 'flex'; // Use flex to center the modal
+                }
+            });
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            programModal.style.display = 'none';
+        });
+
+        // Close modal if user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target == programModal) {
+                programModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
